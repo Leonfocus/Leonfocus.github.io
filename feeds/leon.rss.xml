@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Leon's Blog</title><link>http://Leonfocus.github.io/</link><description></description><atom:link href="http://Leonfocus.github.io/feeds%5Cleon.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 04 Oct 2014 10:15:00 +0800</lastBuildDate><item><title>搭建博客in testing..</title><link>http://Leonfocus.github.io/blog-create.html</link><description>&lt;p&gt;正在搭建博客，测试中，第一次使用reStructuredText写东西，希望一切都好...&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Leon</dc:creator><pubDate>Sat, 04 Oct 2014 10:15:00 +0800</pubDate><guid>tag:Leonfocus.github.io,2014-10-04:blog-create.html</guid></item></channel></rss>

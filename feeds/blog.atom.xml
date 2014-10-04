@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Leon's Blog</title><link href="http://domuse.com/" rel="alternate"></link><link href="http://domuse.com/feeds/blog.atom.xml" rel="self"></link><id>http://domuse.com/</id><updated>2014-10-04T10:15:00+08:00</updated><entry><title>搭建博客in testing..</title><link href="http://domuse.com/blog-create.html" rel="alternate"></link><updated>2014-10-04T10:15:00+08:00</updated><author><name>Leon</name></author><id>tag:domuse.com,2014-10-04:blog-create.html</id><summary type="html">&lt;p&gt;正在搭建博客，测试中，第一次使用reStructuredText写东西，希望一切都好...&lt;/p&gt;
+</summary></entry></feed>
