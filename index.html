@@ -1,144 +1,102 @@
-<!DOCTYPE html>
-<html lang="en"
->
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Leon's Blog</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leon's Blog, ">
 
 
-
-<link rel="canonical" href="http://leonfocus.github.io">
-        <meta name="author" content="Leon" />
-
-    <!-- Enable latex plugin -->
+        <title>Leon's Blog // </title>
 
 
-    <!-- Open Graph tags -->
-        <meta property="og:site_name" content="Leon's Blog" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Leon's Blog"/>
-        <meta property="og:url" content="http://leonfocus.github.io"/>
-        <meta property="og:description" content="Leon's Blog"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/pure.css">
 
-
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="http://leonfocus.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
-
-    <link href="http://leonfocus.github.io/theme/css/pygments/native.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/style.css" type="text/css"/>
-
-
-
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
+
 <body>
-
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="http://leonfocus.github.io/" class="navbar-brand">
-Leon's Blog            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                        <li >
-                            <a href="http://leonfocus.github.io/category/blog.html">Blog</a>
-                        </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://leonfocus.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-</div> <!-- /.navbar -->
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9">
-
-            <article>
-                <h2><a href="http://leonfocus.github.io/blog-create.html">搭建博客in testing..</a></h2>
-                <div class="summary"><p class="first last">The creation of my blog</p>
-
-                    <a class="btn btn-default btn-xs" href="http://leonfocus.github.io/blog-create.html">more ...</a>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <h1 class="brand-main"><a href="/">Leon's Blog</a></h1>
+                            <p class="tagline"></p>
+                                <p class="social">
+                                    <a href="http://www.pku.edu.cm">
+                                        <i class="fa fa-Peking University fa-3x"></i>
+                                    </a>
+                                    <a href="http://www.phy.pku.edu.cn/~zmliao/index.html">
+                                        <i class="fa fa-Liao's Group fa-3x"></i>
+                                    </a>
+                                <p>
+                        </hgroup>
+                    </header>
                 </div>
-            </article>
-            <hr/>
-
+            </div>
         </div>
-        <div class="col-sm-3 well well-sm" id="sidebar">
-
-<aside>
-    <section>
-        <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
-                  <ul class="list-group" id="social">
-                    <li class="list-group-item"><a href="http://www.phy.pku.edu.cn/~zmliao/index.html"><i class="fa fa-liao's-group-@pku-square fa-lg"></i> Liao's Group @PKU</a></li>
-                  </ul>
-                </li>
-
-
-
-                <li class="list-group-item"><a href="http://leonfocus.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-                    <ul class="list-group " id="tags">
-                    </ul>
-                </li>    
-    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
-      <ul class="list-group" id="links">
-        <li class="list-group-item">
-            <a href="http://getpelican.com/" target="_blank">
-                Pelican
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://python.org/" target="_blank">
-                Python
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="https://github.com" target="_blank">
-                Github
-            </a>
-        </li>
-      </ul>
-    </li>
-
-        </ul>
-    </section>
-
-</aside>        </div>
+    <div class="pure-u">
+        <div class="content">
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">
+                            Latest posts
+                </h1>
+                    <section class="post">
+                        <header class="post-header">
+                            <h3><a class="post-title" href="http://leonfocus.github.io/post/2014-10-04-blog-create/">搭建博客in testing..</a></h3>
+                            <p class="post-meta"><p class="first last">The creation of my blog</p>
+</p>
+                            <p class="post-meta">
+                                in <a href="http://leonfocus.github.io/category/blog.html">blog</a> &middot; 周六, 04 十月 2014
+                            </p>
+                        </header>
+                    </section>
+<div class="pagination-wrapper content-subhead">
+    <div class="pagination">
+        <div class="pagination-left">
+                &nbsp;
+        </div>
+        <span>Page 1 / 1</span>
+        <div class="pagination-right">
+        </div>
     </div>
-</div>
-<footer>
-   <div class="container">
-      <hr>
-      <div class="row">
-         <div class="col-xs-10">&copy; 2014 Leon
-            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
-            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
-            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
-         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
-      </div>
-   </div>
-</footer>
-<script src="http://leonfocus.github.io/theme/js/jquery.min.js"></script>
+</div><footer class="footer">
+    <p>&copy; Leon &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://leonfocus.github.io/theme/js/bootstrap.min.js"></script>
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://leonfocus.github.io/theme/js/respond.min.js"></script>
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
 
 </body>
 </html>

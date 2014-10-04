@@ -6,14 +6,21 @@
     <meta name="description" content="Leon's Blog, ">
 
 
-        <title>all posts // Leon's Blog // </title>
+        <title>搭建博客in testing.. // Leon's Blog // </title>
 
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/pure.css">
+    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/pygments.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
 </head>
 
 <body>
@@ -38,14 +45,18 @@
                 </div>
             </div>
         </div>
-    <div class="pure-u-1">
+    <div class="pure-u">
         <div class="content">
-            <h1 class="content-subhead">All posts</h1>
-                <div class="archive-item">
-                    <h5 class="archive-date">2014</h5>
-                    <h4 class="archive-date">04 十月</h4>
-                    <div class="archive-post"><a href="post/2014-10-04-blog-create/">搭建博客in testing..</a></div>
-                </div>
+            <section class="post">
+                <header class="post-header">
+                    <h1>搭建博客in testing..</h1>
+                        <p class="post-meta">
+                            // under                         </p>
+                </header>
+            </section>
+            <p>正在搭建博客，测试中，第一次使用reStructuredText写东西，希望一切都好...</p>
+
+            <a href="#" class="go-top">Go Top</a>
 <footer class="footer">
     <p>&copy; Leon &ndash;
         Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
