@@ -58,9 +58,11 @@ a:hover {
     background-color: inherit;
     border: 0;
 }
+/*
 #menu a {
     text-transform: lowercase;
 }
+*/
 #social a  {
     margin-right: 0em;
     font-size: 1.59em;
@@ -81,7 +83,7 @@ a:hover {
 #sidebar .portrait {
     width: 100%;
     max-width: 250px;
-    max-height: 200px;
+    max-height: 250px;
     margin: 0 0 .5em 0;
 
     vertical-align: center;
