@@ -288,7 +288,7 @@ h1 {
 h2 {
     color: #555;
     font-size: 1.75em;
-    margin: 1.75em 0 .5em 0;
+    margin: 1.5em 0 .5em 0;
     padding: 0 0 .25em 0;
     border-bottom: 1px solid #ddd;
 }
@@ -314,7 +314,7 @@ h3 {
 
 /****** PAGINATION ******/
 .pagination-wrapper {
-    text-transform: lowercase;
+    /*text-transform: lowercase;*/
     color: #777;
     padding: 6px 0 0em 0;
     /*border-bottom: 1px solid #eee;*/
