@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leon's Blog, ">
+
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+    <link rel="apple-touch-icon" sizes="60x60" href="#">
+    <link rel="apple-touch-icon" sizes="120x120" href="#">
+    <link rel="apple-touch-icon" sizes="76x76" href="#">
+    <link rel="apple-touch-icon" sizes="152x152" href="#">
+    <link rel="apple-touch-icon" sizes="180x180" href="#">
+    <link rel="icon" type="image/png" href="#" sizes="192x192">
+    <link rel="icon" type="image/png" href="#" sizes="160x160">
+    <link rel="icon" type="image/png" href="#" sizes="96x96">
+    <link rel="icon" type="image/png" href="#" sizes="16x16">
+    <link rel="icon" type="image/png" href="#" sizes="32x32">
+    
+    
+    
+   
+    
+    
+    
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">    
+    
+        <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
+        <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
+
+        <title>Leon's Blog - Thermotics Chapter1</title>
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/styles.css">
+    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/pygments.css">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <header id="header" class="pure-g">
+        <div class="pure-u-1 pure-u-md-3-4">
+             <div id="menu">
+                 <div class="pure-menu pure-menu-open pure-menu-horizontal">
+<ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/practice/">Practice</a></li>
+        <li><a href="/resume/">Resume</a></li>
+</ul>                </div>
+            </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-4">
+            <div id="social">
+                <div class="pure-menu pure-menu-open pure-menu-horizontal">
+<ul>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://github.com/Leonfocus"><i class="fa fa-github"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="/feeds/atom.xml"><i class="fa fa-rss"></i></a></li>
+</ul>                </div>
+            </div>
+        </div>
+    </header>
+       
+
+    
+    <div id="layout" class="pure-g">
+        <section id="content" class="pure-u-1 pure-u-md-3-4">
+            <div class="l-box">
+
+    <header id="page-header">
+        <h1>Thermotics Chapter1</h1>
+    </header>
+
+    <section id="page">
+        <p><strong>热学 - Chapter 1（TA Notes）</strong></p>
+<ul>
+<li>
+<p>本注解以授课教授讲义为主，参考《大学物理通用教程·热学》（第二版）（北京大学出版社）</p>
+</li>
+<li>
+<p>包括两部分内容: <strong>Part I</strong> -为易错或较难的作业题解答，<strong>Part II</strong> -补充一些视角</p>
+</li>
+</ul>
+<h2 id="part-i">Part I：（部分）习题解答</h2>
+<p>&emsp;&emsp;:) 大部分同学对本章作业题顺利完成，理解或解答的困难主要集中在习题<strong>1.7</strong>和<strong>1.31</strong>，以下是我的注解：</p>
+<h3 id="17">习题1.7</h3>
+<p>&emsp;&emsp;<strong>分析</strong>：不少同学没有看懂题意，其实需要仔细理解<strong>定体气体温度计</strong>的知识。定体气体温标公式 <div class="math">$$T_V(p)=T_{tr} \lim_{p_{tr} \rightarrow 0} \frac{p}{p_{tr}}$$</div>为什么需要测温气体的压强趋于零？这是因为要保证其在理想气体温标的范畴，也就是说无限稀薄的气体才能完全满足理想气体的条件。（稀薄到气体分子的具体结构已经不重要了，分子间作用势可以完全忽略）。题意要求我们得到理想气体温度下的温标，显然需要我们先知道上面的极限式为多少。</p>
+<p>&emsp;&emsp;在摄氏温标下我们从实验中得到的定体<span class="math">\(p-t\)</span>关系（查理定律）<span class="math">\(p=p_0(1+\alpha t)\)</span>，在使用<span class="math">\(T=t_0+t\)</span>的约定后，可以转换成热力学温度T的关系式（此处即理想气体温标）<span class="math">\(T=\frac{p}{p_0}T_0\)</span>，然后经过<strong>外推</strong>才能得到理想气体温标。很显然，测温泡中气体应当无限抽下去才足够稀薄，我们也只能通过题目中所给的两组数据进行外推才可以求解。这里假定<span class="math">\(\frac{p}{p_{tr}}\propto p_{tr}\)</span>。</p>
+<p>(注：题目中其实可以给出该假定，这样做的道理大致是这样：<span class="math">\(\frac{p}{p_{tr}}\propto T\)</span>，又大致由气体方程中<span class="math">\(T \propto p\)</span>，故此假设）</p>
+<p>&emsp;&emsp;<strong>解答</strong>：由上述分析，只需由实验中测定的两组数据构成的直线的两个点来得知截距：
+<div class="math">$$\frac{\frac{p^1}{p_{tr}^1}-\frac{p^2}{p_{tr}^2}}{p_{tr}^1-p_{tr}^2}=\frac{\frac{p^1}{p_{tr}^1}-\lim_{p_{tr} \rightarrow 0} \frac{p}{p_{tr}}}{p_{tr}^1-0}$$</div>
+再代入定体气体温标公式直接可得T。</p>
+<p>备注：</p>
+<ol>
+<li>
+<p>为什么不能直接用理想气体方程？有些同学使用了这种方式，最后发现有一个未知数T可以有两组方程，得到两个结果。其实这个问题已经分析过了，因为求极限的做法正是要外推我们得到的热力学温度T的关系式呢！只有外推得到的才是理想气体，不能本末倒置。</p>
+</li>
+<li>
+<p>题目中该物质的沸点指的是什么？额，有同学问到。其实这里有两种物质，一个是测量物质（即测温泡中的气体），另一个是待测物质（的沸点T），也就说两组数据都是在沸点时得到，只不过测温物质的参量变了。</p>
+</li>
+</ol>
+<h3 id="131">习题1.31</h3>
+<p>&emsp;&emsp;<strong>分析</strong>：这个问题就是让我们比较理想气体状态方程和范德瓦尔斯方程的差异，又是一个证明题，只需要做一点数理分析即可。稍微有些困难在于要用到Taylor展开式，部分同学没有想到。</p>
+<p>&emsp;&emsp;<strong>解答</strong>：<span class="math">\(\nu=1 mol, V\)</span>相同，理想气体的压强<span class="math">\(p_I=\frac{RT}{V}\)</span>，范氏气体
+<div class="math">\begin{align}
+p_V &amp; =\frac{RT}{V-b}-\frac{a}{V^2}\\
+&amp; =\frac{RT}{V(1-\frac{b}{V}})-\frac{a}{V^2}\\
+&amp; =\frac{RT}{V}(1+\frac{b}{V}+\frac{b^2}{V^2}+\cdots)-\frac{a}{V^2}\\
+&amp; =p_I+\frac{RTb-a}{V^2}+O(\frac{1}{V^3})
+\end{align}</div>
+其中<span class="math">\(O(\frac{1}{V^3})&gt;0\)</span>，讨论后两项的符号可知存在一个临界的<span class="math">\(T_B\)</span>。求该<span class="math">\(T_B\)</span>是无需Taylor展开，直接令<span class="math">\(p_I=p_V\)</span>便可以得到解析解。</p>
+<p>备注：有同学通过画图的方式来解答，当然可以！实际上，<span class="math">\(p_I(T)\)</span>和<span class="math">\(p_V(T)\)</span>的斜率可以通过求导直接得到，两者的交点T值即为<span class="math">\(T_B\)</span>，简单快捷！（用作图法求解的同学，我在习题本中也提示可以用Taylor展开法
+来解答）</p>
+<h2 id="part-ii">Part II：多说几句（梳理）</h2>
+<p>&emsp;&emsp;核心知识点参见简明扼要的课堂讲义，这里仅梳理一些视角，加深理解：</p>
+<ul>
+<li>
+<p><strong>分清“理想”与“现实”。</strong>在真实气体足够稀薄时（只有动能起作用），可以认为其是理想气体，用作理想气体温标，满足理想气体状态方程，推得简单的压强和温度公式。另一方面，根据分子间作用力曲线，势能是真实存在的，所以气体状态方程和压强公式都需要修正。范德瓦尔斯通过唯象的方法修正了状态方程，根据两条：一是气体分子不是质点，二是分子间有吸引力。</p>
+</li>
+<li>
+<p><strong>棘手的温度T。</strong>基本物理量中温度是非常难处理的，虽然很早被人们所认识，即“冷热”，但由于它不是广延量（例如质量和长度是广延量，可以简单累加），定温标的时候非常麻烦，不仅仅要有固定标准点，实际上要仔细划分每个温度的标准。目前采用的国际温标ITS-90，最低温度定义到0.65 K（分段采取不同的测量物质），更低的温度没有统一的标准，但目前实验室中能达到的最低温度为mK量级，确定温度是个问题。</p>
+</li>
+<li>
+<p><strong>足够稀薄？</strong>足够稀薄是什么意思，根据Avogadro定律，1 mol理想气体标准状态下体积22.4 L，如果考虑气体分子占据一个立方体的空间，可以据算出分子间距为纳米（<span class="math">\(10^{-9}\)</span>m）量级，约为分子线度的10倍。也就是说，分子间距十倍于分子大小时，吸引力就可以忽略不计，稀薄到可视为理想气体。为什么“破镜不能重圆”，也是因为分子间距太大的缘故，丧失了吸引力。其实分子间的作用力无非就是带电粒子间的作用力，本质是电磁力。</p>
+</li>
+</ul>
+<blockquote>
+<p>下载：<a href="http://leonfocus.github.io/pdfs/2014-10-06-thermotics_chapter1.pdf">PDF版本</a></p>
+</blockquote>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </section>
+
+            </div>
+        </section>
+        
+        <nav id="sidebar" class="pure-u-1 pure-u-md-1-4">
+            <div class="l-box">
+<section>
+	<div class="portrait">
+		<!-- <div class="circular"> -->
+			<img src="/theme/images/leon.png" />
+		<!-- </div> -->
+	</div>
+	<div class="name">Leon Chang, PhD candidate</div>
+	<div class="sub-name">B.Sc | B.Ec @Peking University</div>
+	<div class="contact"></div>
+	<div class="location"></div>
+</section>
+
+<section class="tags">
+    <span class="tag"><a href="/tag/physics/">#physics</a></span>
+    <span class="tag"><a href="/tag/python/">#python</a></span>
+    <span class="tag"><a href="/tag/scipy/">#scipy</a></span>
+    <span class="tag"><a href="/tag/numerical/">#numerical</a></span>
+    <span class="tag"><a href="/tag/ecomomics/">#ecomomics</a></span>
+</section>
+            </div>
+        </nav>
+        
+        <footer id="footer" class="pure-u-1 pure-u-md-3-4">
+            <div class="l-box">
+                <div>
+                    <p>&copy;2014 <a href="http://leonfocus.github.io">Leon Chang</a> &ndash;
+                        Modified from Rossant's <a href="https://github.com/PurePelicanTheme/pure-single">Pure</a> Theme
+                        for <a href="http://blog.getpelican.com/">Pelican</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+    
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10066799; 
+var sc_invisible=1; 
+var sc_security="9dc1b74e"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify visitor
+statistics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/10066799/0/9dc1b74e/1/"
+alt="shopify visitor statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+</body>
+</html>
+
