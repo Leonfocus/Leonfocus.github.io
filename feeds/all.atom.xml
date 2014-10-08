@@ -1,4 +1,353 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Leon's Blog</title><link href="/" rel="alternate"></link><link href="http://leonfocus.github.io/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-10-04T00:00:00+08:00</updated><entry><title>This blog</title><link href="/this-blog/" rel="alternate"></link><updated>2014-10-04T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:,2014-10-04:this-blog/</id><summary type="html">&lt;p&gt;I made a static blog during this National day using &lt;a href="http://blog.getpelican.com/" target="_blank"&gt;Pelican&lt;/a&gt; and &lt;a href="https://pages.github.com/" target="_blank"&gt;Github&lt;/a&gt;. With lots of trials in these two days, this website works finally. Since I am a newbie, I just take many things from other guys (Thanks!). This theme is mainly taken from &lt;a href="http://cyrille.rossant.net/" target="_blank"&gt;Cyrille Rossant's blog&lt;/a&gt;, which is modified from &lt;a href="https://github.com/PurePelicanTheme/pure-single" target="_blank"&gt;Pure&lt;/a&gt; theme. Although some small changes have been made from Rossant's, yet I wanna tweak it more later.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Leon's Blog</title><link href="/" rel="alternate"></link><link href="http://leonfocus.github.io/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-10-09T00:00:00+08:00</updated><entry><title>Markdown and LaTeX Math handbook for physicists</title><link href="/markdown-and-latex-equation-handbook/" rel="alternate"></link><updated>2014-10-09T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:,2014-10-09:markdown-and-latex-equation-handbook/</id><summary type="html">&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is intended to be a concise instruction for physics workers or others, who want to properly render mathematical euqations in Markdown. The frequently-used markdown syntaxs and LaTeX notations of math are listed here. The typical usage of this handbook is Ipython Notebook or Markdown-supported blog, such as Pelican. If you are interested in advanced Markdown skills (acually, it is easy enough!) or publication-ready LaTeX technique, please look elsewhere. The original codes and (some) outputs are put together. And I write the main body in Chinese at present, maybe I will translate it into English later.&lt;/p&gt;
+&lt;h1 id="markdownlatex"&gt;Markdown和LaTeX数学公式速查表&lt;/h1&gt;
+&lt;h2 id="markdown"&gt;Markdown极简手册&lt;/h2&gt;
+&lt;p&gt;Markdown是语法简单、易于书写的标记语言，其支持HTML，直接插入标签即可。Markdown中实现某种功能可能有不止一种语法，这里一般只演示一种。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;标题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Atx形式的语法（另一种为Setex）：在行首插入1-6个#，如&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# H1标题
+### H3标题
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;行尾可以加上同等数量的#，仅仅是为了美观。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;段落和换行&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;文本行前后有一个以上的空行即可。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;区块引用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在每行前加&amp;gt;即可，更简单的方式是只在段落首行添加&amp;gt;。允许嵌套，根据层次使用不同数量的&amp;gt;即可，例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt; Level 1.
+&amp;gt;
+&amp;gt;&amp;gt; Level 2.
+&amp;gt;
+&amp;gt; Back to Level 1.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;引用区块内允许其他Markdown语法，如标题、代码块等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;列表&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;无序列表在行首使用*、+、-中的一种，有序列表使用数字加一个英文句点。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;* Python
+* C++
+* Java
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;列表项目可以包含多个段落，中间空行，且段落首行应缩进一次。如果段落中包含代码块，额外缩进一次。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;强调&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用&lt;em&gt;或_包围的字体或显示成斜体，用两个&lt;/em&gt;或_包围则加粗。（中文字体不建议使用斜体，易读性降低）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;代码块&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;全部缩进一次（4个空格或1个Tab）即可。代码块的Markdown语法不会被转换。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;行内代码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果要标记一小段行内代码，可以使用反引号抱起来(&lt;code&gt;&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分割线&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用三个以上的*、-、_来建立一条分割线，中间允许空格存在&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;* * *
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;链接&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;链接文字放入方括号中，链接地址放入圆括号中，允许相对路径。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;这是一个[例子](http://example.com/)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;或者使用参考式链接：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;[例子][id]
+
+[id]: http://example.com/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果希望链接在浏览器的新标签页中打开，只需要添加{:target="_blank"}在圆括号后即可。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;图片&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;同链接一样，同样有行内式和参考式来标记图片：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;![Alt text](/path/to/img.jpg)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;或者：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;![Alt text][id]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;然后在某处指明图片参考名称&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;[id]: url/to/image.jpg
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;自动链接&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用尖括号包围的网址转换成链接地址和链接文字一样的自动链接，适用于短的网址，如：&lt;a href="http://www.domuse.com"&gt;http://www.domuse.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;中文缩进&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果写中文想在段首缩进两个空格，在前面直接加&lt;code&gt;&amp;amp;emsp;&amp;amp;emsp;&lt;/code&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h2 id="latex"&gt;LaTeX常用数学符号极简手册&lt;/h2&gt;
+&lt;p&gt;LaTeX擅长于写科技和学术论文，这里列出的数学符号仅限于物理学工作者常用的部分。标题中指出的“极简”另一层涵义是，按此方法得到的数学公式没有考究其美学细节，例如字母a和b开方时如何使根号的横线齐平等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上标·下标&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Latex math环境行内公式标记&lt;code&gt;\(...\)&lt;/code&gt;，行间公式&lt;code&gt;\[...\]&lt;/code&gt;（需LaTeX中更多功能时使用&lt;code&gt;\begin{...} ....\end{...}&lt;/code&gt;)，或者可以使用TEX原有的标记激活：&lt;code&gt;$...$&lt;/code&gt;为行内公式或符号，&lt;code&gt;$$...$$&lt;/code&gt;为行间公式或符号。在数学模式中，空格均不起作用，需要诸如&lt;code&gt;\quad，\qquad&lt;/code&gt;的命令。&lt;/p&gt;
+&lt;p&gt;上标命令为&lt;code&gt;^{...}&lt;/code&gt;，下标为&lt;code&gt;_{...}&lt;/code&gt;，角标为单个字符时可不用花括号，同时有上标和下标时，输入次序不重要。如果角标的位置看起来不明显，可以强制改变角标的层次，如一级角标改为二级角标，如&lt;code&gt;y_N&lt;/code&gt;渲染为&lt;span class="math"&gt;\(y_N\)&lt;/span&gt;看不出角标，可以使N为二级下标，&lt;code&gt;y_{_N}&lt;/code&gt;渲染&lt;span class="math"&gt;\(y_{_N}\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分式·根式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;短分数线直接使用&lt;code&gt;/&lt;/code&gt;，水平分数线&lt;code&gt;$\frac{x+y}{2}$&lt;/code&gt;输出&lt;span class="math"&gt;\(\frac{x+y}{2}\)&lt;/span&gt;，当然也可以通过在花括号中添加一个分数的方式得到连分数。&lt;/p&gt;
+&lt;p&gt;开平方&lt;code&gt;$\sqrt{x}$&lt;/code&gt;输出&lt;span class="math"&gt;\(\sqrt{x}\)&lt;/span&gt;，开高次方&lt;span class="math"&gt;\(\sqrt[n]{x}\)&lt;/span&gt;，同样也可以嵌套。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;求和·积分·微分&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;行内求和&lt;code&gt;$\sum_{k=1}^n$&lt;/code&gt;，输出为&lt;span class="math"&gt;\(\sum_{k=1}^n\)&lt;/span&gt;；行内积分&lt;code&gt;$\int_{k=1}^n$&lt;/code&gt;，输出为&lt;span class="math"&gt;\(\int_{k=1}^n\)&lt;/span&gt;，行间求和与积分需要用两个&lt;code&gt;$$&lt;/code&gt;包围，&lt;div class="math"&gt;$$\sum_{k=1}^n, \quad \int_{k=1}^n$$&lt;/div&gt;偏微分符号&lt;code&gt;\partial&lt;/code&gt;，微分算法“d”应该是直体，输入为&lt;code&gt;\mathrm{d}&lt;/code&gt;,&lt;span class="math"&gt;\(mathrm{d}x\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上划线·下划线·其他线&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;公式上划线&lt;code&gt;$\overline{x+y}$&lt;/code&gt;，输出&lt;span class="math"&gt;\(\overline{x+y}\)&lt;/span&gt;；下划线&lt;code&gt;$\underline{x+y}$&lt;/code&gt;，或者上方或下放花括号，使用&lt;code&gt;\overbrace{}&lt;/code&gt;或&lt;code&gt;\underbrace{}&lt;/code&gt;，例如&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$$\underbrace{a + \overbrace{b + \dots + b}^{m\mbox{个}} + c}_{20\mbox{个}}$$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;输出&lt;div class="math"&gt;$$\underbrace{a + \overbrace{b + \dots + b}^{m\mbox{个}} + c}_{20\mbox{个}}$$&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;堆叠符号&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在一个符号上面堆叠另一个符号，使用&lt;code&gt;\stackrel{上方符号}{基位符号}&lt;/code&gt;，如&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$$\vec{x} \stackrel{\mathrm{def}}{=}(x_1,\dots,x_n)$$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;输出&lt;div class="math"&gt;$$\vec{x} \stackrel{\mathrm{def}}{=}(x_1,\dots,x_n)$$&lt;/div&gt;这种方式得到的上下符号字号不同，要得到平等地位的结构，使用&lt;code&gt;{上公式 \atop 下公式}&lt;/code&gt;，如&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$$\sum_{k+0,k_1,\ldots&amp;gt;0 \atop k_0+k_1+\cdots=n} A_{0k_0}A_{1K_1}\cdots$$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;输出&lt;div class="math"&gt;$$\sum_{k+0,k_1,\ldots&amp;gt;0 \atop k_0+k_1+\cdots=n} A_{0k_0}A_{1K_1}\cdots$$&lt;/div&gt;
+或者，使用&lt;code&gt;{上公式 \atop 下公式}&lt;/code&gt;，整个公式被包围在括号中&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$${n+1 \choose k} = {n \choose k} + {n \choose k-1}$$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;输出&lt;div class="math"&gt;$${n+1 \choose k} = {n \choose k} + {n \choose k-1}$$&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定界符尺寸&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;诸如()、[]、{}、|等分割公式的称为定界符，前面加上\big，\Big，\bigg，\Bigg可以放大这些符号，我比较喜欢用自适应的放大命令，&lt;code&gt;\left...\right&lt;/code&gt;，例如&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$$\left. \frac{\partial f(x, y)}{\partial x}\right|_{x=0}$$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;输出&lt;div class="math"&gt;$$\left. \frac{\partial f(x, y)}{\partial x}\right|_{x=0}$$&lt;/div&gt;
+由于只有右侧有|需要变化，左侧没有需要变化的定界符，所以用英文句点.代替。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;矩阵&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$$\left( \begin{array}{ccc}
+    11 &amp;amp; 12 &amp;amp; 13 \\
+    21 &amp;amp; 22 &amp;amp; 23
+\end{array}\right)$$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在{}中指定了对应的列格式，c为内容居中对齐，l为靠左，r为靠右；&amp;amp;为对齐符号，输出
+&lt;div class="math"&gt;$$\left( \begin{array}{ccc}
+        11 &amp;amp; 12 &amp;amp; 13 \\
+        21 &amp;amp; 22 &amp;amp; 23
+  \end{array}\right)$$&lt;/div&gt;
+从上面的例子中我们也可以知道如何输入多行公式及对齐，关键在于&lt;code&gt;\\&lt;/code&gt;和&lt;code&gt;&amp;amp;&lt;/code&gt;符号。又如，&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$$f(x)=\left\{
+    \begin{array}{ll}
+        1 &amp;amp;\mbox{当$x\ge 0$时;}\\
+        0 &amp;amp;\mbox{其他情形.}
+    \end{array}
+    \right.$$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;输出
+&lt;div class="math"&gt;$$f(x)=\left\{
+    \begin{array}{ll}
+        1 &amp;amp;\mbox{当$x\ge 0$时;}\\
+        0 &amp;amp;\mbox{其他情形.}
+    \end{array}
+    \right.$$&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;物理学中常用字母符号&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;物理量（希腊字母）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;输出（Output）&lt;/th&gt;
+&lt;th align="left"&gt;输入（Input）&lt;/th&gt;
+&lt;th align="left"&gt;大写字母（Upcase）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\alpha\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\alpha$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\beta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\beta$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\gamma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\gamma$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;span class="math"&gt;\(\Gamma\)&lt;/span&gt;，&lt;code&gt;$\Gamma$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\delta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\delta$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;span class="math"&gt;\(\Delta\)&lt;/span&gt;，&lt;code&gt;$\Delta$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\epsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\epsilon$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\varepsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\varepsilon$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\zeta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\zeta$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\eta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\eta$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\theta\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\theta$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;span class="math"&gt;\(\theta\)&lt;/span&gt;，&lt;code&gt;$\Theta$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\kappa\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\kappa$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\lambda\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\lambda$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;span class="math"&gt;\(\Lambda\)&lt;/span&gt; ，&lt;code&gt;$\Lambda$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\mu\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\mu$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\nu\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\nu$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\xi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\xi$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;span class="math"&gt;\(\Xi\)&lt;/span&gt;，&lt;code&gt;$\Xi$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\pi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\pi$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;span class="math"&gt;\(\Pi\)&lt;/span&gt;，&lt;code&gt;$\Pi$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\rho\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$rho$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\sigma\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\sigma$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;span class="math"&gt;\(\Sigma\)&lt;/span&gt;，&lt;code&gt;$\Sigma$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\tau\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\tau$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\upsilon\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\upsilon$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\phi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\phi$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;span class="math"&gt;\(\Phi\)&lt;/span&gt;，&lt;code&gt;$\Phi$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\varphi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\varphi$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\chi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\chi$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\psi\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\psi$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;span class="math"&gt;\(\Psi\)&lt;/span&gt;，&lt;code&gt;$\Psi$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\omega\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\omega$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;span class="math"&gt;\(\Omega\)&lt;/span&gt;，&lt;code&gt;$\Omega$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;物理常数和单位&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;常数&lt;/th&gt;
+&lt;th align="left"&gt;输入（Input）&lt;/th&gt;
+&lt;th align="center"&gt;单位&lt;/th&gt;
+&lt;th align="left"&gt;输入（Input）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\hbar\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\hbar$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\celsius\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\celsius$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\textperthousand\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\textperthousand$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\mathring{A}\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\mathring{A}$&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="Markdown"></category><category term="LaTeX"></category></entry><entry><title>This blog</title><link href="/this-blog/" rel="alternate"></link><updated>2014-10-04T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:,2014-10-04:this-blog/</id><summary type="html">&lt;p&gt;I made a static blog during this National day using &lt;a href="http://blog.getpelican.com/" target="_blank"&gt;Pelican&lt;/a&gt; and &lt;a href="https://pages.github.com/" target="_blank"&gt;Github&lt;/a&gt;. With lots of trials in these two days, this website works finally. Since I am a newbie, I just take many things from other guys (Thanks!). This theme is mainly taken from &lt;a href="http://cyrille.rossant.net/" target="_blank"&gt;Cyrille Rossant's blog&lt;/a&gt;, which is modified from &lt;a href="https://github.com/PurePelicanTheme/pure-single" target="_blank"&gt;Pure&lt;/a&gt; theme. Although some small changes have been made from Rossant's, yet I wanna tweak it more later.&lt;/p&gt;
 &lt;p&gt;The original reason why I made this blog is because I want to give some notes and hand out the homeworks as a TA of &lt;em&gt;General Physics(B)-II&lt;/em&gt; course this semester. Moreover, I had a php blog before, but I didn't use it for ages and also lost the password. So Why not a new one? :)&lt;/p&gt;
 &lt;p&gt;Now, I write the blogs in Markdown, but I wanna try reStructuredText to support LaTex equations. Maybe some plugins can help me even in Markdown. Moreover, I'd like to make IPython Notebook survive in this blog. I'll see what I can do. :)&lt;/p&gt;</summary><category term="pelican"></category></entry></feed>
