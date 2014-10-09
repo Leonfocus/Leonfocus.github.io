@@ -31,7 +31,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">    
     
-        <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
+        <link rel="alternate"  href="http://leonfocus.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
         <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
         <title>Leon's Blog - Thermotics Chapter1</title>
@@ -44,17 +44,81 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <!--<![endif]-->
-    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/styles.css">
-    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/pygments.css">
+    <link rel="stylesheet" href="/theme/css/styles.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
     
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <style>  
+        p#back-to-top {  
+            position: fixed;  
+            bottom: 50px;  
+            right: 50px;  
+        }  
+          
+        p#back-to-top a {  
+            text-align: center;  
+            text-decoration: none;  
+            color: #d1d1d1;  
+            display: block;  
+            width: 50px;    
+            -moz-transition: color 1s;  
+            -webkit-transition: color 1s;  
+            -o-transition: color 1s;  
+        }  
+        p#back-to-top a:hover {  
+            color: #979797;  
+        }  
+        p#back-to-top a span {  
+            background: #d1d1d1 url(/img/back_to_top.png) no-repeat center center;  
+            border-radius: 6px;  
+            display: block;  
+            height: 50px;  
+            width: 50px;  
+            margin-bottom: 5px;    
+            -moz-transition: background 1s;  
+            -webkit-transition: background 1s;  
+            -o-transition: background 1s;  
+        }  
+          
+        #back-to-top a:hover span {  
+            background: #979797 url(/theme/images/backtop.png) no-repeat center center;  
+        }  
+    </style>
+
+    <script>  
+    $(document).ready(function() {    
+        $("#back-to-top").hide();  
+        
+        $(function() {  
+            $(window).scroll(function() {  
+                if ($(window).scrollTop() > 100) {  
+                    $("#back-to-top").fadeIn(1500);  
+                }  
+                else {  
+                    $("#back-to-top").fadeOut(1500);  
+                }  
+            });    
+            $("#back-to-top").click(function() {  
+                $('body,html').animate({  
+                    scrollTop: 0  
+                },  
+                500);  
+                return false;  
+            });  
+        });  
+    });  
+</script> 
+
+    
 </head>
 
-<body>
+<body id="top">
 
 
     <header id="header" class="pure-g">
@@ -83,7 +147,7 @@
         </div>
     </header>
        
-
+    <p id="back-to-top"><a href="#top"><span></span></a></p>
     
     <div id="layout" class="pure-g">
         <section id="content" class="pure-u-1 pure-u-md-3-4">
@@ -137,17 +201,18 @@ p_V &amp; =\frac{RT}{V-b}-\frac{a}{V^2}\\
 <p>&emsp;&emsp;核心知识点参见简明扼要的课堂讲义，这里仅梳理一些视角，加深理解：</p>
 <ul>
 <li>
-<p><strong>分清“理想”与“现实”。</strong>在真实气体足够稀薄时（只有动能起作用），可以认为其是理想气体，用作理想气体温标，满足理想气体状态方程，推得简单的压强和温度公式。另一方面，根据分子间作用力曲线，势能是真实存在的，所以气体状态方程和压强公式都需要修正。范德瓦尔斯通过唯象的方法修正了状态方程，根据两条：一是气体分子不是质点，二是分子间有吸引力。</p>
+<p><strong>分清“理想”与“现实”。</strong>在真实气体足够稀薄时（只有动能项起作用），可以认为其是理想气体，用作理想气体温标，满足理想气体状态方程，推得简单的压强和温度公式。另一方面，根据分子间作用力曲线，势能是真实存在的，所以气体状态方程和压强公式都需要修正。范德瓦尔斯通过唯象的方法修正了状态方程，根据两条：一是气体分子不是质点，二是分子间有吸引力。</p>
 </li>
 <li>
-<p><strong>棘手的温度T。</strong>基本物理量中温度是非常难处理的，虽然很早被人们所认识，即“冷热”，但由于它不是广延量（例如质量和长度是广延量，可以简单累加），定温标的时候非常麻烦，不仅仅要有固定标准点，实际上还要仔细划分每个温度的标准。目前采用的国际温标ITS-90，最低温度定义到0.65 K（分段采取不同的测量物质），更低的温度没有统一的标准，但目前实验室中能达到的最低温度为mK量级，确定温度是个问题。</p>
+<p><strong>棘手的温度T。</strong>基本物理量中温度是非常难处理的，虽然很早被人们所认识，即“冷热”，但由于它不是广延量（例如质量和长度是广延量，可以简单累加），定温标的时候非常麻烦，不仅仅要固定标准点，实际上还要仔细划分每个温度。目前实验室普遍采用国际温标ITS-90，其最低温度定义到0.65 K（分段采用不同的测量物质），更低的温度没有统一的标准，但目前实验室中能达到的最低温度为mK量级，确定温度是个重要的问题。</p>
 </li>
 <li>
-<p><strong>足够稀薄？</strong>足够稀薄是什么意思，根据Avogadro定律，1 mol理想气体标准状态下体积22.4 L，如果考虑气体分子占据一个立方体的空间，可以据算出分子间距为纳米（<span class="math">\(10^{-9}\)</span>m）量级，约为分子线度的10倍。也就是说，分子间距十倍于分子大小时，吸引力就可以忽略不计，稀薄到可视为理想气体。为什么“破镜不能重圆”，也是因为分子间距太大的缘故，丧失了吸引力。其实分子间的作用力无非就是带电粒子间的作用力，本质是电磁力。</p>
+<p><strong>足够稀薄？</strong>足够稀薄是什么意思，根据Avogadro定律，1 mol理想气体标准状态下体积22.4 L，如果考虑气体分子占据一个立方体的空间，可以估算出分子间距为纳米（<span class="math">\(10^{-9}\)</span>m）量级，约为分子线度的10倍。也就是说，分子间距十倍于分子大小时，吸引力就可以忽略不计，稀薄到可视为理想气体。为什么“破镜不能重圆”，也是因为分子间距太大的缘故，分子间丧失了吸引力。其实分子间的作用力无非就是带电粒子间的作用力，本质是电磁力。</p>
 </li>
 </ul>
+<p>Last Modified: 2014-10-08</p>
 <blockquote>
-<p>下载：<a href="http://leonfocus.github.io/pdfs/2014-10-06-thermotics_chapter1.pdf" target="_blank">PDF版本</a></p>
+<p>下载：<a href="/pdfs/2014-10-06-thermotics_chapter1.pdf" target="_blank">PDF版本</a></p>
 </blockquote>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
@@ -208,7 +273,7 @@ p_V &amp; =\frac{RT}{V-b}-\frac{a}{V^2}\\
         <footer id="footer" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
                 <div>
-                    <p>&copy;2014 <a href="http://leonfocus.github.io">Leon Chang</a> &ndash;
+                    <p>&copy;2014 <a href="">Leon Chang</a> &ndash;
                         Modified from Rossant's <a href="https://github.com/PurePelicanTheme/pure-single" target="_blank">Pure</a> Theme
                         for <a href="http://blog.getpelican.com/" target="_blank">Pelican</a>
                     </p>

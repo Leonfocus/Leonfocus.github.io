@@ -31,7 +31,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">    
     
-        <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
+        <link rel="alternate"  href="http://leonfocus.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
         <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
         <title>Leon's Blog</title>
@@ -44,17 +44,81 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <!--<![endif]-->
-    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/styles.css">
-    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/pygments.css">
+    <link rel="stylesheet" href="/theme/css/styles.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
     
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <style>  
+        p#back-to-top {  
+            position: fixed;  
+            bottom: 50px;  
+            right: 50px;  
+        }  
+          
+        p#back-to-top a {  
+            text-align: center;  
+            text-decoration: none;  
+            color: #d1d1d1;  
+            display: block;  
+            width: 50px;    
+            -moz-transition: color 1s;  
+            -webkit-transition: color 1s;  
+            -o-transition: color 1s;  
+        }  
+        p#back-to-top a:hover {  
+            color: #979797;  
+        }  
+        p#back-to-top a span {  
+            background: #d1d1d1 url(/img/back_to_top.png) no-repeat center center;  
+            border-radius: 6px;  
+            display: block;  
+            height: 50px;  
+            width: 50px;  
+            margin-bottom: 5px;    
+            -moz-transition: background 1s;  
+            -webkit-transition: background 1s;  
+            -o-transition: background 1s;  
+        }  
+          
+        #back-to-top a:hover span {  
+            background: #979797 url(/theme/images/backtop.png) no-repeat center center;  
+        }  
+    </style>
+
+    <script>  
+    $(document).ready(function() {    
+        $("#back-to-top").hide();  
+        
+        $(function() {  
+            $(window).scroll(function() {  
+                if ($(window).scrollTop() > 100) {  
+                    $("#back-to-top").fadeIn(1500);  
+                }  
+                else {  
+                    $("#back-to-top").fadeOut(1500);  
+                }  
+            });    
+            $("#back-to-top").click(function() {  
+                $('body,html').animate({  
+                    scrollTop: 0  
+                },  
+                500);  
+                return false;  
+            });  
+        });  
+    });  
+</script> 
+
+    
 </head>
 
-<body>
+<body id="top">
 
 
     <header id="header" class="pure-g">
@@ -83,7 +147,7 @@
         </div>
     </header>
        
-
+    <p id="back-to-top"><a href="#top"><span></span></a></p>
     
     <div id="layout" class="pure-g">
         <section id="content" class="pure-u-1 pure-u-md-3-4">
@@ -96,12 +160,12 @@
 
     <section class="post">
         <header class="post-header">
-            <h3><a href="http://leonfocus.github.io/markdown-and-latex-equation-handbook/">Handbook of Markdown and LaTeX Math symbols for physicists</a></h3>
+            <h3><a href="/markdown-and-latex-equation-handbook/">Handbook of Markdown and LaTeX Math symbols for physicists</a></h3>
             <p class="sub-header-3">2014-10-08</p>
             <p class="post-summary"><p><strong>Note:</strong> This post is intended to be a concise instruction for physics workers or others, who want to properly render mathematical euqations in Markdown. The frequently-used markdown syntaxs and LaTeX notations of math are listed here. The typical usage of this handbook is Ipython Notebook or Markdown-supported blog, such as ...</p></p>
         </header>
         <div class="read-more">
-            <a class="pure-button" href="http://leonfocus.github.io/markdown-and-latex-equation-handbook/">
+            <a class="pure-button" href="/markdown-and-latex-equation-handbook/">
                 Read on
             </a>
         </div>
@@ -147,7 +211,7 @@
         <footer id="footer" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
                 <div>
-                    <p>&copy;2014 <a href="http://leonfocus.github.io">Leon Chang</a> &ndash;
+                    <p>&copy;2014 <a href="">Leon Chang</a> &ndash;
                         Modified from Rossant's <a href="https://github.com/PurePelicanTheme/pure-single" target="_blank">Pure</a> Theme
                         for <a href="http://blog.getpelican.com/" target="_blank">Pelican</a>
                     </p>
