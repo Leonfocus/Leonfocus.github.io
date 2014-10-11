@@ -34,7 +34,7 @@
         <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
         <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
-        <title>Leon's Blog - Thermotics Chapter1</title>
+        <title>Leon's Blog - 浅析热运动</title>
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -52,6 +52,12 @@
     
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     
     
         <style>  
@@ -153,66 +159,36 @@
         <section id="content" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
 
-    <header id="page-header">
-        <h1>Thermotics Chapter1</h1>
+    <header id="post-header">
+        <h1>浅析热运动</h1>
+            <div class="post-meta">
+                十月 11, 2014
+            </div>
+            <div class="post-tags">
+                <ul>
+                    <li>tags:</li>
+                    <li><a href="/tag/teaching assistant/">teaching assistant</a></li>
+                </ul>
+            </div>
     </header>
 
-    <section id="page">
-        <p><strong>热学 - Chapter 1（TA Notes）</strong></p>
-<ul>
-<li>
-<p>本注解以授课教授讲义为主，参考《大学物理通用教程·热学》（第二版）（北京大学出版社）</p>
-</li>
-<li>
-<p>包括两部分内容: <strong>Part I</strong> -为易错或较难的作业题解答，<strong>Part II</strong> -补充一些视角</p>
-</li>
-</ul>
-<h2 id="part-i">Part I：（部分）习题解答</h2>
-<p>&emsp;&emsp;:) 大部分同学对本章作业题顺利完成，理解或解答的困难主要集中在习题<strong>1.7</strong>和<strong>1.31</strong>，以下是我的注解：</p>
-<h3 id="17">习题1.7</h3>
-<p>&emsp;&emsp;<strong>分析</strong>：不少同学没有看懂题意，其实需要仔细理解<strong>定体气体温度计</strong>的知识。定体气体温标公式 <div class="math">$$T_V(p)=T_{tr} \lim_{p_{tr} \rightarrow 0} \frac{p}{p_{tr}}$$</div>为什么需要测温气体的压强趋于零？这是因为要保证其在理想气体温标的范畴，也就是说无限稀薄的气体才能完全满足理想气体的条件。（稀薄到气体分子的具体结构已经不重要了，分子间作用势可以完全忽略）。题意要求我们得到理想气体温度下的温标，显然需要我们先知道上面的极限式为多少。</p>
-<p>&emsp;&emsp;在摄氏温标下我们从实验中得到的定体<span class="math">\(p-t\)</span>关系（查理定律）<span class="math">\(p=p_0(1+\alpha t)\)</span>，在使用<span class="math">\(T=t_0+t\)</span>的约定后，可以转换成热力学温度T的关系式（此处即理想气体温标）<span class="math">\(T=\frac{p}{p_0}T_0\)</span>，然后经过<strong>外推</strong>才能得到理想气体温标。很显然，测温泡中气体应当无限抽下去才足够稀薄，我们也只能通过题目中所给的两组数据进行外推才可以求解。这里假定<span class="math">\(\frac{p}{p_{tr}}\propto p_{tr}\)</span>。</p>
-<p>(注：题目中其实可以给出该假定，这样做的道理大致是这样：<span class="math">\(\frac{p}{p_{tr}}\propto T\)</span>，稀薄气体中近似有<span class="math">\(T \propto p\)</span>，故此假设）</p>
-<p>&emsp;&emsp;<strong>解答</strong>：由上述分析，只需由实验中测定的两组数据构成的直线的两个点来得知截距：
-<div class="math">$$\frac{\frac{p^1}{p_{tr}^1}-\frac{p^2}{p_{tr}^2}}{p_{tr}^1-p_{tr}^2}=\frac{\frac{p^1}{p_{tr}^1}-\lim_{p_{tr} \rightarrow 0} \frac{p}{p_{tr}}}{p_{tr}^1-0}$$</div>
-再代入定体气体温标公式直接可得T。</p>
-<p>备注：</p>
-<ol>
-<li>
-<p>为什么不能直接用理想气体方程？有些同学使用了这种方式，最后发现有一个未知数T可以有两组方程，得到两个计算结果。其实这个问题已经分析过了，因为求极限的做法正是要我们外推得到的热力学温度T的关系式呢！只有外推得到的才是理想气体的情况，不能本末倒置。</p>
-</li>
-<li>
-<p>题目中该物质的沸点指的是什么？额，有同学问到。其实这里有两种物质，一个是测量物质（即测温泡中的气体），另一个是待测物质（的沸点T），也就说两组数据都是在沸点时得到，只不过测温物质的参量变了。</p>
-</li>
-</ol>
-<h3 id="131">习题1.31</h3>
-<p>&emsp;&emsp;<strong>分析</strong>：这个问题就是让我们比较理想气体状态方程和范德瓦尔斯方程的差异，又是一个证明题，只需要做一点数理分析即可。稍微有些困难在于要用到Taylor展开式，部分同学没有想到。</p>
-<p>&emsp;&emsp;<strong>解答</strong>：<span class="math">\(\nu=1 mol, V\)</span>相同，理想气体的压强<span class="math">\(p_I=\frac{RT}{V}\)</span>，范氏气体
-<div class="math">\begin{align}
-p_V &amp; =\frac{RT}{V-b}-\frac{a}{V^2}\\
-&amp; =\frac{RT}{V(1-\frac{b}{V}})-\frac{a}{V^2}\\
-&amp; =\frac{RT}{V}(1+\frac{b}{V}+\frac{b^2}{V^2}+\cdots)-\frac{a}{V^2}\\
-&amp; =p_I+\frac{RTb-a}{V^2}+O(\frac{1}{V^3})
-\end{align}</div>
-其中<span class="math">\(O(\frac{1}{V^3})&gt;0\)</span>，讨论后两项的符号可知存在一个临界的<span class="math">\(T_B\)</span>。求该<span class="math">\(T_B\)</span>是无需Taylor展开，直接令<span class="math">\(p_I=p_V\)</span>便可以得到解析解。</p>
-<p>备注：有同学通过画图的方式来解答，当然可以！实际上，<span class="math">\(p_I(T)\)</span>和<span class="math">\(p_V(T)\)</span>的斜率可以通过求导直接得到，两者的交点T值即为<span class="math">\(T_B\)</span>，简单快捷！（用作图法求解的同学，我在习题本中也提示可以用Taylor展开法
-来解答）</p>
-<h2 id="part-ii">Part II：多说几句（梳理）</h2>
-<p>&emsp;&emsp;核心知识点参见简明扼要的课堂讲义，这里仅梳理一些视角，加深理解：</p>
-<ul>
-<li>
-<p><strong>分清“理想”与“现实”。</strong>在真实气体足够稀薄时（只有动能项起作用），可以认为其是理想气体，用作理想气体温标，满足理想气体状态方程，推得简单的压强和温度公式。另一方面，根据分子间作用力曲线，势能是真实存在的，所以气体状态方程和压强公式都需要修正。范德瓦尔斯通过唯象的方法修正了状态方程，根据两条：一是气体分子不是质点，二是分子间有吸引力。</p>
-</li>
-<li>
-<p><strong>棘手的温度T。</strong>基本物理量中温度是非常难处理的，虽然很早被人们所认识，即“冷热”，但由于它不是广延量（例如质量和长度是广延量，可以简单累加），定温标的时候非常麻烦，不仅仅要固定标准点，实际上还要仔细划分每个温度。目前实验室普遍采用国际温标ITS-90，其最低温度定义到0.65 K（分段采用不同的测量物质），更低的温度没有统一的标准，但目前实验室中能达到的最低温度为mK量级，确定温度是个重要的问题。</p>
-</li>
-<li>
-<p><strong>足够稀薄？</strong>足够稀薄是什么意思，根据Avogadro定律，1 mol理想气体标准状态下体积22.4 L，如果考虑气体分子占据一个立方体的空间，可以估算出分子间距为纳米（<span class="math">\(10^{-9}\)</span>m）量级，约为分子线度的10倍。也就是说，分子间距十倍于分子大小时，吸引力就可以忽略不计，稀薄到可视为理想气体。为什么“破镜不能重圆”，也是因为分子间距太大的缘故，分子间丧失了吸引力。其实分子间的作用力无非就是带电粒子间的作用力，本质是电磁力。</p>
-</li>
-</ul>
-<p>Last Modified: 2014-10-08</p>
+    <section id="post">
+        <p>写在前面的话：这是我作为《普通物理（B）II》课助教时，写给非物理系本科生的一个注解，或者说与大家分享的思考。教材是北京大学出版社《大学通用教程·热学》，这篇短文在学习完第二章后，写在Practice一栏中，拟定的题目本来是《从“物质分子处于不停顿的无规则的运动状态”到热平衡态的统计分布律》，但是显得太长了，所以减缩成《浅析热运动》。</p>
+
+
+<p>&emsp;&emsp;物理的奇妙之处在于，它试图探究世界的本原、真实客观的存在；善用数学但不囿于数学，而且有哲学思辨的魅力。理解物理规律往往先从现象（自然语言）描述出发，经过理论（数学公式）推演，最后直达事物本质。这篇短文藉此谈谈篇首说的“物质分子处于不停顿的无规则的运动状态”，直观来看，比较容易接受。但仔细想想什么意思？这句话有两个定语，我们可以审视一番。“不停顿”是指微观粒子不会待着不动，动能不为零，这句话没有提到限定条件，也即是说在任何情形下微观粒子都在运动。说到“任何情形”，有人可能就会怀疑了，怀疑是可贵的
+。
+我们知道理想气体的平均动能和温度的关系：<div class="math">$$\bar{\varepsilon_k}=\frac{3}{2}k_B T，$$</div>那是不是到了绝对零度，气体分子就不动了？绝对零度下所有的热运动都会消失，微观粒子们都安静下来？听着很合理，但坏消息是绝对零度只能不断接近，却不能到达，也就是说，要想消除全部热运动没有可能。为什么零温不可达？要营造一个温度低至0K的体系至少有两方面的困难：一是制冷机在温度越低时的制冷效率越低（卡诺循环处会学到），所以在实验室中要达到mK量级的温度需要逐级制冷，非常复杂；二是漏热或是热辐射无法避免，热从高到低的“流动”是自发的（熵增原理），绝热是不现实的，孤立系统更只是假想的。有人可能进一步想，如果真的T=0K会怎么样？微观粒子是不是就待在一个位置不动呢？实际上，量子力学中的测不准原理告诉我们，这不可能！位置<span class="math">\(x\)</span>和动量<span class="math">\(p\)</span>是一对共轭量，无法同时测准，所以微观粒子绝不会完全停下来。这种微观粒子在绝对零度的震动就是所谓的零点能。当然，零点能又有着非常丰富的内涵，物理学家常说“真空不空”就是这个源起，这里不深入了。</p>
+<p>&emsp;&emsp;第二个定语是“无规则”，也就是说完全随机，速度的大小和方向都是随机的。空间各个方向都可能有微观粒子在跑，以至于推导麦克斯韦分布律的时候只需考虑速度大小即可。但是为什么？这背后说的其实是空间取向的平等性、对称性，即不应当存在一个独特的方向，使粒子做出“奇怪”的行为。第二章下半部分我们进一步说能量在各个自由度也是均等分配的，不存在“独特”的自由度。能量均分定理是细致平衡原理导致的，我认为这更多地是一种朴素的哲学思想，很难用数学公式证明。哲学的基本命题是对宇宙的思考，核心内容便是时间和空间。对于初学者看来，一个极不可思议的事情可能是微观粒子竟然满足速度分布律。不知道大家是否感到奇怪，几年前我初次接触这个物理规律时觉得非常诧异：大量混乱无序的个体为什么会遵循统计规律性？我更曾想，这些彼此无关的“没头苍蝇”怎么会相约着来个“规律”？要探讨这个问题，我打算分成三个层次来说。</p>
+<p>&emsp;&emsp;首先，统计的前提必须是足够多个体或者事件，单个个体的无规则性在统计的话语里演变成“涨落”，涨落反比于粒子数（的开方）。还记得布朗运动吧，其实布朗运动在诸多领域中都非常重要，数学中称作维纳过程，为什么重要呢？一个原因是它也满足统计规律（没有规律的事情只能说是天灾或者福运，然后借助占卜问神，这和自然科学没有多大关系），郎之万方程揭示一维情形时微观粒子布朗运动的均方位移<div class="math">$$&lt;x^2&gt;=2Dt，$$</div>即与时间成正比！这里我演示与之密切相关但更加简明的现象：一维随机游走。从数轴的原点出发，这位Walker（可以翻译成漫步者）显然也是没头苍蝇地乱撞，每一步移动一个单位，向左和向右的概率相同（为1/2），那我们能不能预测t时刻Walker的典型位置呢？就像我们处理最概然分布一样，这里的手段也是先假设有N个Walker一同漫步，最后看他们的平均值即可（这种技术在热学·平衡态统计物理中称为系综平均，因为每个个体的选择只有一个，如同人生没有回头路一样，但是为了预测它的未来，我们假想许多处于同样情景的个体，看不同的抉择有什么样的后果）。我在计算机上模拟了N=3和N=1000的情形，结果如下图：</p>
+<p><img alt="random walk" src="../images/randomwalker.png" /></p>
+<p>虽然单个Walker的行为完全随机，但是大量同样的Walker满足统计规律性，方均根位移与时间满足<span class="math">\(\sqrt{\langle (\delta x)^2 \rangle} \propto t\)</span>。</p>
+<p>&emsp;&emsp;然后，我们接着问，为啥就有这样的统计规律性呢？这个问题也可以这样表述：好，我看到确实统计起来数学公式可以表达，但是我想知道道理在哪。其实，这样问的原因在于还是没有接受这个世界中有些客观问题本质就是概率的，不是机械的。当哥白尼等人证明地球绕着太阳转时，所有人也觉得没有道理，甚至有宗教迫害的威胁；后来牛顿认为宇宙像上了发条的钟表，热动平衡中的概率分布就变得很奇怪，不过爱因斯坦就接受了，还为解释布朗运动做出重要贡献；但是当量子论出现后，爱因斯坦也直呼“上帝不会掷骰子”——现实比想象更离奇。人们对世界的认识是不断革新的，物理学家对理论体系也是不断自我修正的。统计规律性已经延伸到其他领域，如社会学和金融学，其客观存在就如同万有引力的存在那样真实。</p>
+<p>&emsp;&emsp;说了这么多，或许还有极少数人继续追问，为什么这个世界是统计规律的，或者泄气地说，世界干嘛要弄成这样！好吧，这时候我的思考是这样的，物理学家尽可能地解释世界的深层次内涵，但是有些问题已经超出了科学的边界，有待哲学家做出他们的贡献。很多时候我们如同身处柏拉图的“洞穴”，对外面世界的了解未必是一手资料，得到的理论只是要让所有的观察自洽。物理学家们努力告诉我们是什么，不一定有能力告诉我们为什么。量子力学的出现把人类的理解能推到边缘，对一些问题丧失了具象能力，量子力学的大师也教导我们“闭嘴，只管算”（不要问为什么）。但是，人类就是在某些个体不断追问为什么的过程中，向前发展。与锁在洞穴里的人不同，我们是自由的。</p>
+<p>&emsp;&emsp;这就是我从“物质分子处于不停顿的无规则的运动”出发，对第二章统计分布律内容的注解，虽然不是直接解析公式，但希望能加深大家的认识。</p>
+<p>:) 如有不妥之处，请联系我。</p>
 <blockquote>
-<p>下载：<a href="http://leonfocus.github.io/pdfs/2014-10-06-thermotics_chapter1.pdf" target="_blank">PDF版本</a></p>
+<p>Last Modified: 2014-10-11</p>
 </blockquote>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
@@ -242,6 +218,19 @@ p_V &amp; =\frac{RT}{V-b}-\frac{a}{V^2}\\
 }
 </script>
     </section>
+
+
+<nav class="pagination-wrapper">
+    <div class="pagination">
+        <div class="pagination-left">
+        </div>
+        <div class="pagination-right">
+                <a href="http://leonfocus.github.io/markdown-and-latex-equation-handbook/">
+                    next&nbsp;&rarr;
+                </a>
+        </div>
+    </div>
+</nav>
 
             </div>
         </section>
