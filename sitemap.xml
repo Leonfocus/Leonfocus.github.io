@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://leonfocus.github.io/index.html</loc>
-<lastmod>2014-10-11T21:29:29-00:00</lastmod>
+<lastmod>2014-10-13T15:44:21-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -46,6 +46,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://leonfocus.github.io/why-physicist-need-python/</loc>
+<lastmod>2014-10-13T00:00:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
 <loc>http://leonfocus.github.io/thermal-motion-concept/</loc>
 <lastmod>2014-10-11T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -67,15 +74,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://leonfocus.github.io/tag/teaching-assistant/</loc>
-<lastmod>2014-10-11T00:00:00+08:06</lastmod>
+<loc>http://leonfocus.github.io/tag/latex/</loc>
+<lastmod>2014-10-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://leonfocus.github.io/tag/pelican/</loc>
-<lastmod>2014-10-09T00:00:00+08:06</lastmod>
+<loc>http://leonfocus.github.io/tag/teaching-assistant/</loc>
+<lastmod>2014-10-11T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -88,7 +95,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://leonfocus.github.io/tag/latex/</loc>
+<loc>http://leonfocus.github.io/tag/python/</loc>
+<lastmod>2014-10-13T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://leonfocus.github.io/tag/pelican/</loc>
 <lastmod>2014-10-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -96,7 +110,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://leonfocus.github.io/tag/physics/</loc>
-<lastmod>2014-10-11T00:00:00+08:06</lastmod>
+<lastmod>2014-10-13T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

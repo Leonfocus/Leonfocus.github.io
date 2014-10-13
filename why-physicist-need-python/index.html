@@ -34,7 +34,7 @@
         <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
         <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
-        <title>Leon's Blog - 项目（Projects）</title>
+        <title>Leon's Blog - Why physics students and physicists need python?</title>
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -52,6 +52,12 @@
     
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     
     
         <style>  
@@ -153,19 +159,73 @@
         <section id="content" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
 
-    <header id="page-header">
-        <h1>项目（Projects）</h1>
+    <header id="post-header">
+        <h1>Why physics students and physicists need python?</h1>
+            <div class="post-meta">
+                十月 13, 2014
+            </div>
+            <div class="post-tags">
+                <ul>
+                    <li>tags:</li>
+                    <li><a href="/tag/Python/">Python</a></li>
+                    <li><a href="/tag/Physics/">Physics</a></li>
+                </ul>
+            </div>
     </header>
 
-    <section id="page">
-        <h2 id="python-recipes-for-physicists">Python Recipes for Physicists</h2>
-<p>Data processing and visualization Python recipes for physicists. <a href="https://github.com/Leonfocus/Physics-Python-Recipes" target="_blank">Codes on Github</a></p>
-<p>This project collects practical recipes for experimental physicists (may be also useful to other sciences), but has nothing to do with computational physics. Data processing like fitting, interpolation, differential, spectrum analysis and so on in real world should be pulled in.</p>
-<p>Visualization recipes contains not only plot skills to display experimental dataset, but also codes for generating simple demonstration of some physical phenomena and process, such as double pendulum. The interactive plotting recipes, that is, display in browser using Ipython Notebook or other JS binding techniques, should be added.</p>
-<h2 id="feed-selective-physical-websites">Feed Selective Physical Websites</h2>
-<p>Feed high IF physical journals, such as PRL, Nature Physics from the their offical websites. The titles and related links of latest published articles can be sent to my email. It's a small project realized by WebQt, BeautifulSoup and Python of course. </p>
-<p>As a beginner, I'm also interested in web crawler and web programming things. I wanna focus on open data connection and effective analysis technology in the near future. </p>
+    <section id="post">
+        <p>Nowadays, the <a href="https://www.python.org/" target="_blank">Python</a> language has become a widely used tool for scientists and engineers, which is fully stacked with powerful support packages, such as numpy and scipy. However, I came across Python due to the need of an easy-to-use web framework until last summer. After several days of trails, I found Python was such an elegent and easy-to-learn language. So I immediately got out of PHP and turned to Python for the purpose of Web programming. When I realized its capability for scientific computing three months ago, I decided to dig deeper into it.</p>
+<p>Why python for physics? In other words, why Python language is suitable for physics students or physicists? </p>
+<ul>
+<li>Computer skills are called. </li>
+</ul>
+<p>Regardless of the specific displine in physics, or other sciences, the processing of dataset and visualization are in our workflow. In the last decade, all the experimental datasets are almost acquired by computers. We must handle different kinds of data format supplied by our devices, such as fitting, filtering, plotting. Previously, We can do this by MS Excel, Origin, Matlab or others. But now, Python is at hand. </p>
+<ul>
+<li>Python is easy to learn. </li>
+</ul>
+<p>This is important since physicists are not professional programmers. They are just problem solvers in real world. Non-physics skills should not be much too time-consuming. The gentle learning curve of the technique tool is preferred. Luckily, Python is clean, elegent and easily readable. What's more, Python is a interpreted language, which means the programs can be run without any changes between different operating systems.</p>
+<ul>
+<li>Python is extended by abundant libraries. </li>
+</ul>
+<p>Like many other modern language, Python is extendable. The most important thing is Python has a huge and active community for scientific computation. You can almost find any fundamental applications just via the speicific module or liabrary. <a href="http://www.numpy.org/" target="_blank">Numpy</a> and <a href="http://scipy.org/" target="_blank">Scipy</a> are ready for numercal work, which are very fast and offer many predefined functions. They have built-in linear algebra, sparse matrices, Fourier tansform, optimization and other things. <a href="http://matplotlib.org/" target="_blank">Matplotlib</a> and <a href="http://vpython.org/" target="_blank">visual</a> (or other libraris) can make 2D/3D graphics for you. Some other famous libraries are also on the list, such as Sympy, pandas, scikit-learn...</p>
+<ul>
+<li>Binding with your browser.</li>
+</ul>
+<p>You will realize that Python is cool when you invoke <a href="http://ipython.org/" target="_blank">Ipython Notebook</a> in your favorite browsers, such as Chrome and Firefox. The binding between Python and JS (or other Web techniques) tells that the day of computing in browsers is coming. IPython Notebook promises you can easily share the data with your colleagues. The interactive widgets from IPython Notebook version 2.0 and later makes the interacting with the data via figures real-time.</p>
+<ul>
+<li>The last but not the least, Python can integrate with C/C++ and Fortran codes.</li>
+</ul>
+<p>Once you want to perform computation, simulation, data processing or visualsization work, you should give Python a try!</p>
     </section>
+
+
+<nav class="pagination-wrapper">
+    <div class="pagination">
+        <div class="pagination-left">
+        </div>
+        <div class="pagination-right">
+                <a href="http://leonfocus.github.io/thermal-motion-concept/">
+                    next&nbsp;&rarr;
+                </a>
+        </div>
+    </div>
+</nav>
+    <aside class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "leonfocus"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </aside>
 
             </div>
         </section>
