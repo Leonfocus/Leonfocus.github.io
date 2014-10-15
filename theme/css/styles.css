@@ -188,7 +188,7 @@ a:hover {
     color: #777;
     font-size: .85em;
     text-align: right;
-    text-transform: lowercase;
+    /*text-transform: lowercase;*/
 }
 #content header .post-tags ul {
     margin: 0 0 1em 0;

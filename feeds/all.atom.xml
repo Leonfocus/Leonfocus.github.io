@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Leon's Blog</title><link href="/" rel="alternate"></link><link href="http://leonfocus.github.io/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-10-13T00:00:00+08:00</updated><entry><title>Why physics students and physicists need python?</title><link href="/why-physicist-need-python/" rel="alternate"></link><updated>2014-10-13T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:,2014-10-13:why-physicist-need-python/</id><summary type="html">&lt;p&gt;Nowadays, the &lt;a href="https://www.python.org/" target="_blank"&gt;Python&lt;/a&gt; language has become a widely used tool for scientists and engineers, which is fully stacked with powerful support packages, such as numpy and scipy. However, I came across Python due to the need of an easy-to-use web framework until last summer. After several days of trails, I found Python was such an elegent and easy-to-learn language. So I immediately got out of PHP and turned to Python for the purpose of Web programming. When I realized its capability for scientific computing three months ago, I decided to dig deeper into it.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Leon's Blog</title><link href="/" rel="alternate"></link><link href="http://leonfocus.github.io/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-10-15T00:00:00+08:00</updated><entry><title>Why physics students and physicists need python?</title><link href="/why-physicist-need-python/" rel="alternate"></link><updated>2014-10-13T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:,2014-10-13:why-physicist-need-python/</id><summary type="html">&lt;p&gt;Nowadays, the &lt;a href="https://www.python.org/" target="_blank"&gt;Python&lt;/a&gt; language has become a widely used tool for scientists and engineers, which is fully stacked with powerful support packages, such as numpy and scipy. However, I came across Python due to the need of an easy-to-use web framework until last summer. After several days of trails, I found Python was such an elegent and easy-to-learn language. So I immediately got out of PHP and turned to Python for the purpose of Web programming. When I realized its capability for scientific computing three months ago, I decided to dig deeper into it.&lt;/p&gt;
 &lt;p&gt;Why python for physics? In other words, why Python language is suitable for physics students or physicists? &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Computer skills are called. &lt;/li&gt;
@@ -142,8 +142,8 @@
 
 &lt;p&gt;&lt;strong&gt;自动链接&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;用尖括号包围的网址转换成链接地址和链接文字一样的自动链接，适用于短的网址，如：&lt;a href="http://www.domuse.com"&gt;http://www.domuse.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;中文缩进&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果写中文想在段首缩进两个空格，在前面直接加&lt;code&gt;&amp;amp;emsp;&amp;amp;emsp;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;中文缩进·空格&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果写中文想在段首缩进两个空格，在前面直接加全放大的空格两个&lt;code&gt;&amp;amp;emsp;&amp;amp;emsp;&lt;/code&gt;，半方大的空格&lt;code&gt;&amp;amp;ensp;&lt;/code&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;hr /&gt;
 &lt;h2 id="latex"&gt;LaTeX常用数学符号极简手册&lt;/h2&gt;
@@ -595,7 +595,18 @@
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="Markdown"></category><category term="LaTeX"></category><category term="Physics"></category></entry><entry><title>This blog</title><link href="/this-blog/" rel="alternate"></link><updated>2014-10-09T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:,2014-10-04:this-blog/</id><summary type="html">&lt;p&gt;I made a static blog during this National day using &lt;a href="http://blog.getpelican.com/" target="_blank"&gt;Pelican&lt;/a&gt; and &lt;a href="https://pages.github.com/" target="_blank"&gt;Github&lt;/a&gt;. With lots of trials in these two days, this website works finally. Since I am a newbie, I just take many things from other guys (Thanks!). This theme is mainly taken from &lt;a href="http://cyrille.rossant.net/" target="_blank"&gt;Cyrille Rossant's blog&lt;/a&gt;, which is modified from &lt;a href="https://github.com/PurePelicanTheme/pure-single" target="_blank"&gt;Pure&lt;/a&gt; theme. Although some small changes have been made from Rossant's, yet I wanna tweak it more later.&lt;/p&gt;
+&lt;/script&gt;</summary><category term="Markdown"></category><category term="LaTeX"></category><category term="Physics"></category></entry><entry><title>This blog</title><link href="/this-blog/" rel="alternate"></link><updated>2014-10-15T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:,2014-10-04:this-blog/</id><summary type="html">&lt;p&gt;I made a static blog during this National day using &lt;a href="http://blog.getpelican.com/" target="_blank"&gt;Pelican&lt;/a&gt; and &lt;a href="https://pages.github.com/" target="_blank"&gt;Github&lt;/a&gt;. With lots of trials in these two days, this website works finally. Since I am a newbie, I just take many things from other guys (Thanks!). This theme is mainly taken from &lt;a href="http://cyrille.rossant.net/" target="_blank"&gt;Cyrille Rossant's blog&lt;/a&gt;, which is modified from &lt;a href="https://github.com/PurePelicanTheme/pure-single" target="_blank"&gt;Pure&lt;/a&gt; theme. Although some small changes have been made from Rossant's, yet I wanna tweak it more later.&lt;/p&gt;
 &lt;p&gt;The original reason why I made this blog is because I want to give some notes and hand out the homeworks as a TA of &lt;em&gt;General Physics(B)-II&lt;/em&gt; course this semester. Moreover, I had a php blog before, but I didn't use it for ages and also lost the password. So Why not a new one? :)&lt;/p&gt;
 &lt;p&gt;Now, I write the blogs in Markdown, but I wanna try reStructuredText to support LaTex equations. Maybe some plugins can help me even in Markdown. Moreover, I'd like to make IPython Notebook survive in this blog. I'll see what I can do. :)&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: So, why &lt;strong&gt;domuse&lt;/strong&gt;? Actually, it's the combination of two words, Do and Muse, that is, Practice and Thinking. OK, that's the story of the website name if you are curious.&lt;/p&gt;</summary><category term="Pelican"></category></entry></feed>
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: So, why &lt;strong&gt;domuse&lt;/strong&gt;? Actually, it's the combination of two words, Do and Muse, that is, Practice and Thinking. OK, that's the story of the website name if you are curious.&lt;/p&gt;
+&lt;p&gt;Theme's Changelog: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2014-10-05: Simplify the &lt;em&gt;Sidebar&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;2014-10-10: Tweak layout just by changing a dozen CSS codes&lt;/li&gt;
+&lt;li&gt;2014-10-15: Add a new template &lt;em&gt;post.html&lt;/em&gt; for Projects and Practice linked-pages. &lt;ul&gt;
+&lt;li&gt;Articles: default, list in the index, with date, tages and disqus&lt;/li&gt;
+&lt;li&gt;Default Pages or Pages: three menu-linked ones here&lt;/li&gt;
+&lt;li&gt;Custom Pages or Posts: like articles, but not list in index&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Pelican"></category></entry></feed>
