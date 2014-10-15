@@ -598,15 +598,15 @@
 &lt;/script&gt;</summary><category term="Markdown"></category><category term="LaTeX"></category><category term="Physics"></category></entry><entry><title>This blog</title><link href="/this-blog/" rel="alternate"></link><updated>2014-10-15T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:,2014-10-04:this-blog/</id><summary type="html">&lt;p&gt;I made a static blog during this National day using &lt;a href="http://blog.getpelican.com/" target="_blank"&gt;Pelican&lt;/a&gt; and &lt;a href="https://pages.github.com/" target="_blank"&gt;Github&lt;/a&gt;. With lots of trials in these two days, this website works finally. Since I am a newbie, I just take many things from other guys (Thanks!). This theme is mainly taken from &lt;a href="http://cyrille.rossant.net/" target="_blank"&gt;Cyrille Rossant's blog&lt;/a&gt;, which is modified from &lt;a href="https://github.com/PurePelicanTheme/pure-single" target="_blank"&gt;Pure&lt;/a&gt; theme. Although some small changes have been made from Rossant's, yet I wanna tweak it more later.&lt;/p&gt;
 &lt;p&gt;The original reason why I made this blog is because I want to give some notes and hand out the homeworks as a TA of &lt;em&gt;General Physics(B)-II&lt;/em&gt; course this semester. Moreover, I had a php blog before, but I didn't use it for ages and also lost the password. So Why not a new one? :)&lt;/p&gt;
 &lt;p&gt;Now, I write the blogs in Markdown, but I wanna try reStructuredText to support LaTex equations. Maybe some plugins can help me even in Markdown. Moreover, I'd like to make IPython Notebook survive in this blog. I'll see what I can do. :)&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: So, why &lt;strong&gt;domuse&lt;/strong&gt;? Actually, it's the combination of two words, Do and Muse, that is, Practice and Thinking. OK, that's the story of the website name if you are curious.&lt;/p&gt;
+&lt;p&gt;Update: So, why &lt;strong&gt;domuse&lt;/strong&gt;? Actually, it's the combination of two words, Do and Muse, that is, Practice and Thinking. OK, that's the story of the website name if you are curious.&lt;/p&gt;
 &lt;p&gt;Theme's Changelog: &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;2014-10-05: Simplify the &lt;em&gt;Sidebar&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;2014-10-05: Simplify the Sidebar&lt;/li&gt;
 &lt;li&gt;2014-10-10: Tweak layout just by changing a dozen CSS codes&lt;/li&gt;
-&lt;li&gt;2014-10-15: Add a new template &lt;em&gt;post.html&lt;/em&gt; for Projects and Practice linked-pages. &lt;ul&gt;
-&lt;li&gt;Articles: default, list in the index, with date, tages and disqus&lt;/li&gt;
+&lt;li&gt;2014-10-15: Add a new template post.html for Projects and Practice linked-pages. &lt;ul&gt;
+&lt;li&gt;Articles: list in the index, with date tages and disqus&lt;/li&gt;
 &lt;li&gt;Default Pages or Pages: three menu-linked ones here&lt;/li&gt;
-&lt;li&gt;Custom Pages or Posts: like articles, but not list in index&lt;/li&gt;
+&lt;li&gt;Custom Pages or Posts: looks like articles, but not list in index&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary><category term="Pelican"></category></entry></feed>
