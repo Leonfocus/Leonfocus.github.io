@@ -31,7 +31,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">    
     
-        <link rel="alternate"  href="http://leonfocus.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
+        <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
         <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
         <title>Leon's Blog - Handbook of Markdown and LaTeX Math symbols for physicists</title>
@@ -44,8 +44,8 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <!--<![endif]-->
-    <link rel="stylesheet" href="/theme/css/styles.css">
-    <link rel="stylesheet" href="/theme/css/pygments.css">
+    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/styles.css">
+    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/pygments.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
@@ -265,8 +265,8 @@
 <p><strong>分式·根式</strong></p>
 <p>短分数线直接使用<code>/</code>，水平分数线<code>$\frac{x+y}{2}$</code>输出<span class="math">\(\frac{x+y}{2}\)</span>，当然也可以通过在花括号中添加一个分数的方式得到连分数。</p>
 <p>开平方<code>$\sqrt{x}$</code>输出<span class="math">\(\sqrt{x}\)</span>，开高次方<code>$\sqrt[n]{x}$</code>，同样也可以嵌套。</p>
-<p><strong>求和·积分·微分</strong></p>
-<p>行内求和<code>$\sum_{k=1}^n$</code>，输出为<span class="math">\(\sum_{k=1}^n\)</span>；行内积分<code>$\int_{k=1}^n$</code>，输出为<span class="math">\(\int_{k=1}^n\)</span>，行间求和与积分需要用两个<code>$$</code>包围，<div class="math">$$\sum_{k=1}^n, \quad \int_{k=1}^n$$</div>偏微分符号<code>\partial</code>，微分算法“d”应该是直体，输入为<code>\mathrm{d}</code>,<span class="math">\(\mathrm{d}x\)</span>。</p>
+<p><strong>求和·连乘·积分·微分</strong></p>
+<p>行内求和<code>$\sum_{k=1}^n$</code>，输出为<span class="math">\(\sum_{k=1}^n\)</span>；行内连乘<code>$\prod_{i=0}^n$</code>；行内积分<code>$\int_{k=1}^n$</code>，输出为<span class="math">\(\int_{k=1}^n\)</span>，行间求和与积分只需要用两个<code>$$</code>包围，<div class="math">$$\sum_{k=1}^n, \prod_{i=0}^n, \quad \int_{k=1}^n$$</div>偏微分符号<code>\partial</code>，微分算法“d”应该是直体，输入为<code>\mathrm{d}</code>,<span class="math">\(\mathrm{d}x\)</span>。</p>
 <p><strong>上划线·下划线·其他线</strong></p>
 <p>公式上划线<code>$\overline{x+y}$</code>，输出<span class="math">\(\overline{x+y}\)</span>；下划线<code>$\underline{x+y}$</code>，或者上方或下放花括号，使用<code>\overbrace{}</code>或<code>\underbrace{}</code>，例如</p>
 <div class="highlight"><pre>$$\underbrace{a + \overbrace{b + \dots + b}^{m\mbox{个}} + c}_{20\mbox{个}}$$
@@ -532,6 +532,18 @@
 <td align="center"></td>
 <td align="left"></td>
 </tr>
+<tr>
+<td align="center"><span class="math">\(\ell_i(x)\)</span></td>
+<td align="left"><code>$\ell_i(x)$</code></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><span class="math">\(x'\)</span></td>
+<td align="left"><code>$x'$</code></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
 </tbody>
 </table>
 <p>[注1] 加粗字母，如矢量，需宏包\usepackage{bm}</p>
@@ -713,12 +725,12 @@
 <nav class="pagination-wrapper">
     <div class="pagination">
         <div class="pagination-left">
-                <a href="/thermal-motion-concept/">
+                <a href="http://leonfocus.github.io/thermal-motion-concept/">
                     &larr; previous
                 </a>
         </div>
         <div class="pagination-right">
-                <a href="/this-blog/">
+                <a href="http://leonfocus.github.io/this-blog/">
                     next&nbsp;&rarr;
                 </a>
         </div>
@@ -771,7 +783,7 @@
         <footer id="footer" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
                 <div>
-                    <p>&copy;2014 <a href="">Leon Chang</a> &ndash;
+                    <p>&copy;2014 <a href="http://leonfocus.github.io">Leon Chang</a> &ndash;
                         Modified from Rossant's <a href="https://github.com/PurePelicanTheme/pure-single" target="_blank">Pure</a> Theme
                         for <a href="http://blog.getpelican.com/" target="_blank">Pelican</a>
                     </p>

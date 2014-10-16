@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leon's Blog, ">
+
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+    <link rel="apple-touch-icon" sizes="60x60" href="#">
+    <link rel="apple-touch-icon" sizes="120x120" href="#">
+    <link rel="apple-touch-icon" sizes="76x76" href="#">
+    <link rel="apple-touch-icon" sizes="152x152" href="#">
+    <link rel="apple-touch-icon" sizes="180x180" href="#">
+    <link rel="icon" type="image/png" href="#" sizes="192x192">
+    <link rel="icon" type="image/png" href="#" sizes="160x160">
+    <link rel="icon" type="image/png" href="#" sizes="96x96">
+    <link rel="icon" type="image/png" href="#" sizes="16x16">
+    <link rel="icon" type="image/png" href="#" sizes="32x32">
+    
+    
+    
+   
+    
+    
+    
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">    
+    
+        <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
+        <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
+
+        <title>Leon's Blog - Lagrange插值</title>
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/styles.css">
+    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/pygments.css">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <style>  
+        p#back-to-top {  
+            position: fixed;  
+            bottom: 50px;  
+            right: 50px;  
+        }  
+          
+        p#back-to-top a {  
+            text-align: center;  
+            text-decoration: none;  
+            color: #d1d1d1;  
+            display: block;  
+            width: 50px;    
+            -moz-transition: color 1s;  
+            -webkit-transition: color 1s;  
+            -o-transition: color 1s;  
+        }  
+        p#back-to-top a:hover {  
+            color: #979797;  
+        }  
+        p#back-to-top a span {  
+            background: #d1d1d1 url(/theme/images/backtop.png) no-repeat center center;  
+            border-radius: 6px;  
+            display: block;  
+            height: 50px;  
+            width: 50px;  
+            margin-bottom: 5px;    
+            -moz-transition: background 1s;  
+            -webkit-transition: background 1s;  
+            -o-transition: background 1s;  
+        }  
+          
+        #back-to-top a:hover span {  
+            background: #979797 url(/theme/images/backtop.png) no-repeat center center;  
+        }  
+    </style>
+
+    <script>  
+    $(document).ready(function() {    
+        $("#back-to-top").hide();  
+        
+        $(function() {  
+            $(window).scroll(function() {  
+                if ($(window).scrollTop() > 100) {  
+                    $("#back-to-top").fadeIn(1500);  
+                }  
+                else {  
+                    $("#back-to-top").fadeOut(1500);  
+                }  
+            });    
+            $("#back-to-top").click(function() {  
+                $('body,html').animate({  
+                    scrollTop: 0  
+                },  
+                500);  
+                return false;  
+            });  
+        });  
+    });  
+</script> 
+
+    
+</head>
+
+<body id="top">
+
+
+    <header id="header" class="pure-g">
+        <div class="pure-u-1 pure-u-md-3-4">
+             <div id="menu">
+                 <div class="pure-menu pure-menu-open pure-menu-horizontal">
+<ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/practice/">Practice</a></li>
+        <li><a href="/resume/">Resume</a></li>
+</ul>                </div>
+            </div>
+        </div>
+
+        <div class="pure-u-1 pure-u-md-1-4">
+            <div id="social">
+                <div class="pure-menu pure-menu-open pure-menu-horizontal">
+<ul>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://github.com/Leonfocus"><i class="fa fa-github"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="/feeds/atom.xml"><i class="fa fa-rss"></i></a></li>
+</ul>                </div>
+            </div>
+        </div>
+    </header>
+       
+    <p id="back-to-top"><a href="#top"><span></span></a></p>
+    
+    <div id="layout" class="pure-g">
+        <section id="content" class="pure-u-1 pure-u-md-3-4">
+            <div class="l-box">
+
+    <header id="page-header">
+        <h1>Lagrange插值</h1>
+            <div class="post-meta">
+                    十月 15, 2014
+                </div>
+                <div class="post-tags">
+                    <ul>
+                        <li>tags:</li>
+                        <li><a href="/tag/numerical/">numerical</a></li>
+                        <li><a href="/tag/python/">python</a></li>
+                    </ul>
+                </div>    
+    </header>
+
+    <section id="page">
+        <p>&emsp;&emsp;
+
+插值问题：已知函数<span class="math">\(y=f(x)\)</span>在区间[a, b]上n+1个互异点（术语为“插值节点”）<span class="math">\(a \le x_0 &lt; x_1 &lt; \cdots &lt; x_n \le b\)</span>的函数值<span class="math">\(f(x_i)\)</span>，若存在一个简单函数<span class="math">\(y=y(x)\)</span>经过这n+1个点，即<span class="math">\(y(x_i)=y_i=f(x_i)\)</span>，称<span class="math">\(y=y(x)\)</span>为<span class="math">\(f(x)\)</span>在这些节点处的插值函数。实际上就是，我们通过实验、测量等手段得到n+1个数据对<span class="math">\((x_i, y_i), i=0,1, \ldots, n\)</span>，需要推测其他点的函数值
+
+，也即估计函数<span class="math">\(y=y(x)\)</span>。 </p>
+<p>&emsp;&emsp;利用插值函数y(x)，我们可以进一步近似计算f(x)的函数值、导数等。插值函数的形式可以是多项式、三角函数、指数函数、样条函数等等，一般要求光滑简单。最常用的是多项式插值或者分段多项式插值，可能的原因是：（1）多项式函数简单光滑、可微可积；（2）Weierstrass定理指出，任意连续函数可用多项式作任意精度的逼近。对于插值方法，我目前只关注多项式插值或者分段插值。</p>
+<p>&emsp;&emsp;唯一性：对于n+1个互异节点，显然只要多项式次数不超过n就能保证插值函数唯一。这条数学定理很容易证明，直观地我们知道对于线性方程组，n+1个数据点正好够（存在且唯一）求解n+1个未知数（系数行列式为Vandermonde行列式）。也就是说，我们应该限制插值多项式次数的上限为n。</p>
+<h2 id="lagrange">Lagrange插值理论</h2>
+<p>&emsp;&emsp;既然我们有n+1元线性方程组，能否直接求解呢？一般来说，计算量比较大（感兴趣可参见其他介绍线性方程组算法的教材）。Lagrange插值方法的思路是这样的，对于n+1元线性方程，对应着次数不超过n的多项式空间（常数+n个系数共n+1个未知数），我们能否构造出一组基函数<span class="math">\(\ell_i(x), i=0,1,\cdots,n\)</span>，使得插值多项式(此处<span class="math">\(y_n(x)\)</span>常记为<span class="math">\(L_n(x)\)</span>)
+<div class="math">$$L_n(x) = \sum_{i=0}^{n} a_i \ell_i(x)$$</div>
+中的系数<span class="math">\(a_i\)</span>更易求解呢？因为<span class="math">\(L_n(x_i)=f(x_i)\)</span>，只需令这些基函数
+<div class="math">$$\ell_i(x_j)=\delta_{ij}=\left\{
+                            \begin{array}{ll}
+                                1 &amp; i=j;\\
+                                0 &amp; i\ne j.
+                            \end{array}
+                          \right.$$</div>
+则立即有<span class="math">\(a_i=f(x_i), i=0, 1, \cdots, n\)</span>。根据基函数的性质，可以构造出其具体表达式
+<div class="math">$$\ell_i(x)  =  \frac{(x-x_0)(x-x_1)\cdots (x-x_{i-1})(x-x_{i+1}) \cdots (x-x_n)}{(x_i-x_0)(x_i-x_1) \cdots (x_i-x_{i-1})(x_i-x_{i+1}) \cdots (x_i-x_n)} =  \prod_{j=0 \atop j \ne i}^n \frac{x-x_j}{x_i-x_j}$$</div>
+如果我们记<span class="math">\(P_{n+1}(x)=\prod_{i=0}^n (x-x_i),\)</span>
+那么Lagrange插值基函数<div class="math">$$\ell_i(x)  =  \frac{P_{n+1}(x)}{(x-x_i)P_{n+1}'(x)}$$</div>
+于是得到n次Lagrange插值多项式
+<div class="math">$$L_n(x)=\sum_{i=0}^n f(x_i)\ell_i(x)$$</div>
+</p>
+<p>&emsp;&emsp;特别地，在两个数据对<span class="math">\((x_0,y_0), (x_1,y_1)\)</span>时，Lagrange插值为线性插值（一次）；三个数据对时，为抛物线插值（二次）。我们可以直接带入上面公式得到Lagrange插值基函数，但是这里我想演示一下Lagrange插值算法的<strong>直观过程</strong>。以线性插值为例，有数据<span class="math">\((x_0,f(x_0)), (x_1,f(x_1))\)</span>，解方程组
+<div class="math">$$\left\{
+    \begin{array}{ll}
+        a_0 + a_1x_0 =f(x_0) \\
+        a_0 + a_1x_1 =f(x_1)
+    \end{array}
+   \right.$$</div>
+很容易反解出<span class="math">\(a_0\)</span>和<span class="math">\(a_1\)</span>，插值多项式<div class="math">$$y_1(x)=a_0+a_1x=\frac{x-x_1}{x_0-x_1}f(x_0)+\frac{x-x_0}{x_1-x_0}f(x_1)$$</div>
+利用Lagrange插值基函数的定义，可以写出<span class="math">\(L_1(x)=\ell_0(x)f(x_0)+\ell_1(x)f(x_1)\)</span>。实际上线性插值比较常见，一般来说我们用作图软件画X-Y数据图时，默认的在两点之间就采用线性插值连线。二次到n次的Lagrange插值可以类推。</p>
+<p>&emsp;&emsp;我只是比较好奇插值基函数到底是啥样？从定义来看，<span class="math">\(\ell_i(x)\)</span>都是n次齐次的，<span class="math">\(f(x_i)\ell_i(x)\)</span>各穿过一个数据点，在其他<span class="math">\(x_j\)</span>处取零值。四个数据对(n=3)时，<span class="math">\(L_3(x)\)</span>与4个基本多项式的情况如下图（来自<a href="http://en.wikipedia.org/wiki/Lagrange_polynomial" target="_blank">Wikipedia</a>）</p>
+<p>&emsp;&emsp;<img alt="Lagrange interpolation" src="../images/lagrangeinterpolation.png" /></p>
+<p>&emsp;&emsp;例子：已知<span class="math">\(\sqrt{4}=2, \sqrt{9}=3, \sqrt{16}=4\)</span>，求<span class="math">\(\sqrt{11}\)</span>。</p>
+<p>&emsp;&emsp;我们关心的一个问题是，Lagrange插值的精度如何，也即Lagrange插值余项<span class="math">\(R_n(x)=f(x)-L_n(x)\)</span>。结论是
+<div class="math">$$R_n=\frac{f^{(n+1)}(\xi)}{(n+1)!}P_{n+1}(x), x\in [a,b], \xi \in (a,b)$$</div>
+证明思路：由于<span class="math">\(R_n(x_i)=0, i=0, 1, \cdots, n\)</span>成立，可令<span class="math">\(R_n(x)=K(x)P_{n+1}(t)\)</span>，构造辅助函数<span class="math">\(\varphi(t)=f(t)-L_n(t)-K(x)P_{n+1}(t)\)</span>，其有n+2个互异零点，对t求导，反复利用Roll定理n+2次，便容易证明。</p>
+<p>&emsp;&emsp;如果<span class="math">\(f^{(n+1)}(x)\)</span>在插值区间有上界<span class="math">\(M_{N+1}\)</span>，我们就可以估计截断误差。</p>
+<p>&emsp;&emsp;Lagrange插值多项式的优点是形式对称，易于编程，大多数情况下余项会随着插值节点个数增加（增大n）而减小（后面研究特例：Runge现象）。缺点是在增加插值节点时，已计算过的插值基函数不能重复利用，需要全部重新计算，比较浪费。解决方法如逐步线性插值方法（Aitken和Neville插值）和Newton插值法。</p>
+<h2 id="python">Python编程实现</h2>
+<p>&emsp;&emsp;显然，用Python编写Lagrange插值算法只需二重循环即可：</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+
+<span class="k">def</span> <span class="nf">lagrange</span><span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Polynomial Interpolation: Lagrange&#39;s Method</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">basis</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+        <span class="n">l_i</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x_val</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">x_val</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">x_val</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_val</span><span class="p">))</span> <span class="k">if</span> <span class="n">j</span> <span class="o">!=</span> <span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="n">l_i</span><span class="p">)</span><span class="o">*</span><span class="n">y_val</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_val</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_val</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_val</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">basis</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_val</span><span class="p">)))</span>
+
+<span class="c"># example:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lagrange</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="c">#3.33333...</span>
+</pre></div>
+
+
+<p>这里也演示了上面那个例子，可以根据公式直接手算来验证程序的正确性。Python代码放在我的Github中<a href="https://github.com/Leonfocus/Physics-Python-Recipes" target="_blank">lagrange.py</a>供下载。</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </section>
+    
+    <aside class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "leonfocus"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </aside>
+            </div>
+        </section>
+        
+        <nav id="sidebar" class="pure-u-1 pure-u-md-1-4">
+            <div class="l-box">
+<section>
+	<div class="portrait">
+		<!-- <div class="circular"> -->
+			<img src="/theme/images/leon.png" />
+		<!-- </div> -->
+	</div>
+	<div class="name">Leon Chang, PhD candidate</div>
+	<div class="sub-name">B.Sc | B.Ec @Peking University</div>
+	<div class="contact"></div>
+	<div class="location"></div>
+</section>
+
+<section class="tags">
+    <span class="tag"><a href="/tag/physics/">#physics</a></span>
+    <span class="tag"><a href="/tag/python/">#python</a></span>
+    <span class="tag"><a href="/tag/scipy/">#scipy</a></span>
+    <span class="tag"><a href="/tag/numerical/">#numerical</a></span>
+    <span class="tag"><a href="/tag/ecomomics/">#ecomomics</a></span>
+</section>
+            </div>
+        </nav>
+        
+        <footer id="footer" class="pure-u-1 pure-u-md-3-4">
+            <div class="l-box">
+                <div>
+                    <p>&copy;2014 <a href="http://leonfocus.github.io">Leon Chang</a> &ndash;
+                        Modified from Rossant's <a href="https://github.com/PurePelicanTheme/pure-single" target="_blank">Pure</a> Theme
+                        for <a href="http://blog.getpelican.com/" target="_blank">Pelican</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+    
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10066799; 
+var sc_invisible=1; 
+var sc_security="9dc1b74e"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify visitor
+statistics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/10066799/0/9dc1b74e/1/"
+alt="shopify visitor statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+</body>
+</html>
+

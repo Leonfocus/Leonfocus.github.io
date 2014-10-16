@@ -154,8 +154,8 @@
 &lt;p&gt;&lt;strong&gt;分式·根式&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;短分数线直接使用&lt;code&gt;/&lt;/code&gt;，水平分数线&lt;code&gt;$\frac{x+y}{2}$&lt;/code&gt;输出&lt;span class="math"&gt;\(\frac{x+y}{2}\)&lt;/span&gt;，当然也可以通过在花括号中添加一个分数的方式得到连分数。&lt;/p&gt;
 &lt;p&gt;开平方&lt;code&gt;$\sqrt{x}$&lt;/code&gt;输出&lt;span class="math"&gt;\(\sqrt{x}\)&lt;/span&gt;，开高次方&lt;code&gt;$\sqrt[n]{x}$&lt;/code&gt;，同样也可以嵌套。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;求和·积分·微分&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;行内求和&lt;code&gt;$\sum_{k=1}^n$&lt;/code&gt;，输出为&lt;span class="math"&gt;\(\sum_{k=1}^n\)&lt;/span&gt;；行内积分&lt;code&gt;$\int_{k=1}^n$&lt;/code&gt;，输出为&lt;span class="math"&gt;\(\int_{k=1}^n\)&lt;/span&gt;，行间求和与积分需要用两个&lt;code&gt;$$&lt;/code&gt;包围，&lt;div class="math"&gt;$$\sum_{k=1}^n, \quad \int_{k=1}^n$$&lt;/div&gt;偏微分符号&lt;code&gt;\partial&lt;/code&gt;，微分算法“d”应该是直体，输入为&lt;code&gt;\mathrm{d}&lt;/code&gt;,&lt;span class="math"&gt;\(\mathrm{d}x\)&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;求和·连乘·积分·微分&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;行内求和&lt;code&gt;$\sum_{k=1}^n$&lt;/code&gt;，输出为&lt;span class="math"&gt;\(\sum_{k=1}^n\)&lt;/span&gt;；行内连乘&lt;code&gt;$\prod_{i=0}^n$&lt;/code&gt;；行内积分&lt;code&gt;$\int_{k=1}^n$&lt;/code&gt;，输出为&lt;span class="math"&gt;\(\int_{k=1}^n\)&lt;/span&gt;，行间求和与积分只需要用两个&lt;code&gt;$$&lt;/code&gt;包围，&lt;div class="math"&gt;$$\sum_{k=1}^n, \prod_{i=0}^n, \quad \int_{k=1}^n$$&lt;/div&gt;偏微分符号&lt;code&gt;\partial&lt;/code&gt;，微分算法“d”应该是直体，输入为&lt;code&gt;\mathrm{d}&lt;/code&gt;,&lt;span class="math"&gt;\(\mathrm{d}x\)&lt;/span&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;上划线·下划线·其他线&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;公式上划线&lt;code&gt;$\overline{x+y}$&lt;/code&gt;，输出&lt;span class="math"&gt;\(\overline{x+y}\)&lt;/span&gt;；下划线&lt;code&gt;$\underline{x+y}$&lt;/code&gt;，或者上方或下放花括号，使用&lt;code&gt;\overbrace{}&lt;/code&gt;或&lt;code&gt;\underbrace{}&lt;/code&gt;，例如&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;$$\underbrace{a + \overbrace{b + \dots + b}^{m\mbox{个}} + c}_{20\mbox{个}}$$
@@ -418,6 +418,18 @@
 &lt;tr&gt;
 &lt;td align="center"&gt;&lt;span class="math"&gt;\(\bar{x}\)&lt;/span&gt;&lt;/td&gt;
 &lt;td align="left"&gt;&lt;code&gt;$\bar{x}$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(\ell_i(x)\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$\ell_i(x)$&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;span class="math"&gt;\(x'\)&lt;/span&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;code&gt;$x'$&lt;/code&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;/td&gt;
 &lt;td align="left"&gt;&lt;/td&gt;
 &lt;/tr&gt;
