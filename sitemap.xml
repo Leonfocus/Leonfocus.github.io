@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://leonfocus.github.io/index.html</loc>
-<lastmod>2014-10-16T21:28:02-00:00</lastmod>
+<lastmod>2014-10-18T21:45:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -19,7 +19,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://leonfocus.github.io/lagrange-interpolation/</loc>
-<lastmod>2014-10-15T00:00:00-00:00</lastmod>
+<lastmod>2014-10-16T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -60,6 +60,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://leonfocus.github.io/thermotics-chapter3/</loc>
+<lastmod>2014-10-18T00:00:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
 <loc>http://leonfocus.github.io/why-physicist-need-python/</loc>
 <lastmod>2014-10-13T00:00:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -88,34 +95,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://leonfocus.github.io/tag/markdown/</loc>
-<lastmod>2014-10-09T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://leonfocus.github.io/tag/physics/</loc>
-<lastmod>2014-10-13T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://leonfocus.github.io/tag/python/</loc>
-<lastmod>2014-10-13T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://leonfocus.github.io/tag/scipy/</loc>
-<lastmod>2014-10-13T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://leonfocus.github.io/tag/pelican/</loc>
 <lastmod>2014-10-15T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -130,8 +109,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://leonfocus.github.io/tag/markdown/</loc>
+<lastmod>2014-10-09T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://leonfocus.github.io/tag/physics/</loc>
+<lastmod>2014-10-13T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://leonfocus.github.io/tag/scipy/</loc>
+<lastmod>2014-10-13T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://leonfocus.github.io/tag/latex/</loc>
 <lastmod>2014-10-09T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://leonfocus.github.io/tag/python/</loc>
+<lastmod>2014-10-13T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

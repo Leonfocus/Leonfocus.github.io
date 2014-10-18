@@ -34,7 +34,7 @@
         <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
         <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
-        <title>Leon's Blog - 引言-插值</title>
+        <title>Leon's Blog - Thermotics Chapter3</title>
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -154,31 +154,86 @@
             <div class="l-box">
 
     <header id="page-header">
-        <h1>引言-插值</h1>
+        <h1>Thermotics Chapter3</h1>
             <div class="post-meta">
-                    十月 14, 2014
+                    十月 18, 2014
                 </div>
                 <div class="post-tags">
                     <ul>
                         <li>tags:</li>
-                        <li><a href="/tag/numerical/">numerical</a></li>
-                        <li><a href="/tag/python/">python</a></li>
                         <li><a href="/tag/physics/">physics</a></li>
                     </ul>
                 </div>    
     </header>
 
     <section id="page">
-        <p>这虽然是给“插值”部分写的引言，但在后续数据处理中未必有这样一个小节，所以尽量顾及通用性。</p>
-<p>&emsp;&emsp;
-
-在我过去两年的科研工作中，数据处理一直是至关重要的环节，但似乎又没有受到足够的重视。学院式教学中，更多注重连续或局部连续的函数的处理，但现实世界似乎更偏爱离散。实验数据总是离散的，我们往往要从这些离散点中提取出某些函数信息，又几乎总是从插值开始。在诸如Origin、Matlab等科研软件盛行的今天，专业人员已经为我们提供了丰富的接口命令（图形或函数化）来完成许多数据处理的繁重工作，以至于大部分时候我们不需要知道其内部的实现细节。然而，在使用这样接口命令时，由于缺乏基本的了解可能会造成严重的计算误差或者其他无意的人为错误
-
-，这在科研中是不应该的。另一方面，学术圈流行的许多数值算法的中文教材常偏重于数理化推导，这是我所不喜欢的。我常想：为什么不能更通俗清晰一点呢？可能这些书籍的目标是作为严谨的教材，而这里，只是我整理和加工的学习资料。</p>
-<p>&emsp;&emsp;我在书写这些内容时，始终坚守一些信条。第一条准则是实用。也就说，我不是要展现数学的美感，而是要用它解决实际问题，特别是科研实验中数据的处理。换句话说，我不会给出很多数学结论的证明，但是我尝试提供能找到这些证明的资料。</p>
-<p>&emsp;&emsp;第二条准则是明晰。为什么不说得清楚一点，不仅要我的脑海中非常清晰，还应该寻找清晰的表达方式。虽然人类的知识目前在不少地方已经达到高度抽象的层次，但试图把道理讲得明晰一点是有必要的。也许，我会牺牲适当的精确度来做到这一点。</p>
-<p>&emsp;&emsp;第三条准则是与编程结合，特别是和Python结合。关于Python，我前几天写过一篇文章<a href="http://leonfocus.github.io/why-physicist-need-python/">Why physics students and physicists need python?</a>。因为介绍这些数值算法对于大部分科研人员来说，并不意味着自己要去编写，而是更好的运用，虽然我可能在一些算法后中给出Python实现，但还是强烈建议使用numpy、scipy等中提供的函数接口，因为他们已经被高度优化过了。</p>
-<p>&emsp;&emsp;接下来说说“插值”。常用的包括多项式插值和样条插值。多项式插值中又有Lagrange插值、Newton法，要求节点导数精确的Hermite插值，分段利用多项式插值等。样条插值中最常用的三次样条插值。当然，插值的问题也涉及到维度，这里可能只研究一维插值，二维或者三维情形有机会另外讨论。</p>
+        <p><strong>热学 - Chapter 3（TA Notes）</strong></p>
+<ul>
+<li>
+<p>本注解以授课教授讲义为主，参考《大学物理通用教程·热学》（第二版）（北京大学出版社）</p>
+</li>
+<li>
+<p>包括两部分内容: <strong>Part I</strong> -为易错或较难的作业题解答，<strong>Part II</strong> -补充一些视角</p>
+</li>
+</ul>
+<h2 id="part-i">Part I：（部分）习题解答</h2>
+<p>&emsp;&emsp;:) 大部分同学对本章作业题顺利完成，有几位同学没有攻克习题<strong>3.9</strong>，甚至说连参考答案都看不懂（-_-!)，以下是我的注解：</p>
+<h3 id="39">习题3.9</h3>
+<p>&emsp;&emsp;<strong>解析</strong>：如果阅读了课本p105-107页，这道题似乎也不是很难。题文的意思是：若有90%的电子的自由程超过了20cm，问此时显像管压强是多少。自由程的分布函数已经由课本(3.16)式给出(关于此公式的注解见备注)
+<div class="math">$$P(\lambda)=\frac{1}{\bar{\lambda}}e^{-\frac{\lambda}{\bar{\lambda}}}$$</div>
+那么自由程<span class="math">\(\lambda\)</span>大于L的概率
+<div class="math">$$F(\lambda&gt;L)=\int_{L}^{\infty}P(\lambda)\mathrm{d}\lambda =e^{-L/\bar{\lambda}}.$$</div>
+另外我们考察从阴极管出来的电子束与稀薄气体分子的碰撞过程，可以利用(3.7)-(3.8)公式，电子的平均自由程
+<div class="math">$$\bar{\lambda}=\frac{\bar{\upsilon}}{\bar{Z}}=\frac{\bar{\upsilon}}{n\sigma\bar{u}}$$</div>
+需要注意的是，这里电子的尺寸可以忽略（在电子看来，分子就是庞然大物），求散射截面只需带入空气分子的半径d/2。另外粒子间的相对运动速度<span class="math">\(\bar{u}\)</span>近似为电子的速度\bar{\upsilon}。对于空气分子数密度n利用<span class="math">\(n=p/k_B T\)</span>即可。由这些公式联立便可以得到压强的表达式
+<div class="math">$$p=-\frac{4k_B T}{\pi d^2 L}ln F(\lambda&gt;L)$$</div>
+带入数据可解得真空度至少为<span class="math">\(3.1\times 10^{-2} Pa\)</span>。</p>
+<p>&emsp;&emsp;<strong>备注</strong>：</p>
+<ol>
+<li>课本中气体分子碰撞的概率分布的推导非常漂亮（似乎讲义中没作要求），我们可以探讨一下。要得到分布同样从<span class="math">\(\lambda~\lambda+\mathrm{d}\lambda\)</span>入手，实际上就是计算已运动了<span class="math">\(\lambda\)</span>距离后在又一小段<span class="math">\(mathrm{d}\lambda\)</span>长度内发生碰撞的粒子百分比，这个比率应当和碰前粒子数和碰撞的长度成比例。之后就是一些数学过程了。其实，从这个概率分布的推导过程我们可以看出，气体分子内部仍然是遵循着牛顿定律，在我们需要的时候可以追踪这些粒子的轨迹（虽然在推导麦克斯韦分布律时我们完全没有利用这些细节）。进一步地，我们说气体分子满足统计规律性，但不代表我们没有办法知道这些粒子的确切运动状态，如果我们知道了分子的初态和边界，完全可以预测这些粒子的位置和速度，只是我们不关心罢了（当然，目前没有计算机能够处理个体数多达<span class="math">\(10^22\)</span>量级的系统）。</li>
+<li>在显像管中电子碰撞气体分子传递能量，气体分子的热运动又把能量传给显像管的壁，产生加热效果。所以，在隔绝热的需求中，高真空度非常重要，否则气体的热运动会造成很大的漏热，例如低温实验中的液氦杜瓦、生活中暖水壶的内胆。</li>
+</ol>
+<h2 id="part-ii">Part II：多说几句</h2>
+<p>&emsp;&emsp;课本和讲义中说明分子的平均自由程时说，麦克斯韦速度分布律能证明两分子的相对运动速度<span class="math">\(\bar{u}=\sqrt{2}\bar{\upsilon}\)</span>，不知道有没有人好奇究竟是怎么得到的？如何从速度分布律得到相对速度分布律呢？感兴趣的往下看~</p>
+<p>设分子的速度<span class="math">\(\upsilon\)</span>的分量<span class="math">\(\upsilon_i (i = x,y,z)\)</span>。麦克斯韦速度分布律给出平衡态时，
+<div class="math">$$f(\upsilon_i)=(\frac{m}{2\pi k T})^{1/2}e^{-m_i^2/2kT}$$</div>
+速度为<span class="math">\(\upsilon\)</span>的分子和另一<span class="math">\(\upsilon'\)</span>的分子相对速度<span class="math">\(u=\upsilon'-\upsilon\)</span>，分量形式<span class="math">\(u_i=\upsilon_i'-\upsilon_i\)</span>，则
+<div class="math">$$f(u_i)=\int_{-\infty}^{\infty}f(-\upsilon_i)f(u_i+\upsilon_i)\mathrm{d}\upsilon_i=\frac{m}{2\pi k T}\int_{-\infty}^{\infty}e^{-\frac{m}{2kT}[2(\frac{u_i}{2}+\upsilon_i)^2+\frac{1}{2}u_i^2]}\mathrm{d}\upsilon_i$$</div>
+做变量替换<span class="math">\(x^2=\frac{m}{2kT}[2(\frac{u_i}{2}+\upsilon_i)^2+\frac{1}{2}u_i^2]\)</span>，再利用积分公式<span class="math">\(\int_0^{\infty}e^{-x^2}\mathrm{d}x =\frac{\sqrt{\pi}}{2}\)</span>可以得到相对运动速率分布律
+<div class="math">$$f(u_i)=\frac{1}{2}\sqrt{\frac{m}{\pi k T}}e^{-\frac{mu_i^2}{4kT}}$$</div>
+然后利用方向无关性，可以得到相对速度分布律
+<div class="math">$$f(u)=\int f(u_x)f(u_y)f(u_z)u^2 \sin\theta \mathrm{d}\theta \mathrm{d}\varphi =(\frac{1}{2}\sqrt{\frac{m}{\pi k T}})^3 4\pi e^{-\frac{mu^2}{4kT}}u^2$$</div>
+然后便可以求平均相对速率
+<div class="math">$$\bar{u}=\frac{\pi}{4}(\frac{m}{\pi k T})^{\frac{3}{2}}\int_0^{\infty}e^{-\frac{mu^2}{4kT}}u^22u\mathrm{d}u,$$</div>令<span class="math">\(x=u^2\)</span>，再用积分公式<span class="math">\(\int_0^{\infty}x^n e^{-ax}\mathrm{d}x=\frac{n!}{a^{n+1}}\)</span>就可以得到
+<div class="math">$$\bar{u}=4\sqrt{\frac{kT}{\pi m}}=\sqrt{2}\bar{\upsilon}.$$</div>
+</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
     </section>
     
     <aside class="comments">

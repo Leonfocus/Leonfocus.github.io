@@ -156,7 +156,7 @@
     <header id="page-header">
         <h1>Lagrange插值</h1>
             <div class="post-meta">
-                    十月 15, 2014
+                    十月 16, 2014
                 </div>
                 <div class="post-tags">
                     <ul>
@@ -207,7 +207,7 @@
 <p>&emsp;&emsp;我们关心的一个问题是，Lagrange插值的精度如何，也即Lagrange插值余项<span class="math">\(R_n(x)=f(x)-L_n(x)\)</span>。结论是
 <div class="math">$$R_n=\frac{f^{(n+1)}(\xi)}{(n+1)!}P_{n+1}(x), x\in [a,b], \xi \in (a,b)$$</div>
 证明思路：由于<span class="math">\(R_n(x_i)=0, i=0, 1, \cdots, n\)</span>成立，可令<span class="math">\(R_n(x)=K(x)P_{n+1}(t)\)</span>，构造辅助函数<span class="math">\(\varphi(t)=f(t)-L_n(t)-K(x)P_{n+1}(t)\)</span>，其有n+2个互异零点，对t求导，反复利用Roll定理n+2次，便容易证明。</p>
-<p>&emsp;&emsp;如果<span class="math">\(f^{(n+1)}(x)\)</span>在插值区间有上界<span class="math">\(M_{N+1}\)</span>，我们就可以估计截断误差。</p>
+<p>&emsp;&emsp;如果<span class="math">\(f^{(n+1)}(x)\)</span>在插值区间有上界<span class="math">\(M_{n+1}\)</span>，我们就可以估计截断误差。</p>
 <p>&emsp;&emsp;Lagrange插值多项式的优点是形式对称，易于编程，大多数情况下余项会随着插值节点个数增加（增大n）而减小（后面研究特例：Runge现象）。缺点是在增加插值节点时，已计算过的插值基函数不能重复利用，需要全部重新计算，比较浪费。解决方法如逐步线性插值方法（Aitken和Neville插值）和Newton插值法。</p>
 <h2 id="python">Python编程实现</h2>
 <p>&emsp;&emsp;显然，用Python编写Lagrange插值算法只需二重循环即可：</p>
