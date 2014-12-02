@@ -173,7 +173,8 @@
 <p>&emsp;&emsp;Lagrange算法是在n维线性空间中找了一组形式简单对称的基函数，使得插值问题容易计算，一般情况下这个算法已经足够好用了。但存在一个缺点是，如果由于精度不满足要求而临时增加一个插值节点时，所有基函数都得重新计算。我们想，那能不能找到一种改进的算法来避免这种资源浪费呢？实际上这就需要逐次线性插值法来解决，也就是说将高次插值问题逐步转化为线性插值，或者说将两组由k个节点算得的Lagrange插值作为形式节点，再进行一次线性插值来得到k+1个节点时的值。</p>
 <p>&emsp;&emsp;先做如下符号约定：令<span class="math">\(I_{i_1 i_2 \cdots i_n}(x)\)</span>表示函数<span class="math">\(f(x)\)</span>关于节点<span class="math">\(i_1, i_2, \cdots ,i_n\)</span>的n-1次插值多项式，<span class="math">\(I_{i_k}(x)\)</span>是零次多项式，<span class="math">\(I_{i_k}(x)=f(x_{i_k})=y_{i_k}\)</span>，<span class="math">\(i_1,\cdots, i_n\)</span>均为非负整数。下面通过一个例子来说明“形式节点”的线性插值是如何做到的，演示最简单的情形：由2个节点增加到3个节点的插值问题，也就是由线性插值到抛物线插值。已知线性插值<div class="math">$$I_{0,1}=\frac{x-x_1}{x_0-x_1}y_0+\frac{x-x_0}{x_1-x_0}y_1=L_1(x),$$</div>
 <div class="math">$$I_{1,2}=\frac{x-x_1}{x_2-x_1}y_2+\frac{x-x_2}{x_1-x_2}y_1,$$</div>求节点为<span class="math">\(x_0, x_1,x_2\)</span>的<span class="math">\(I_{0,1,2}=L_2(x)\)</span>. </p>
-<p>&emsp;&emsp;根据n阶Lagrange插值多项式为n次齐次多项式，可以写出如下组合关系：<div class="math">$$I_{0,1,2}=a(x-x_2)I_{0,1}(x)+b(x-x_0)I_{1,2}(x),$$</div>满足<span class="math">\(I_{0,1,2}(x_i)=y_i\)</span>，则由<span class="math">\(y_0和y_1\)</span>可以得到<span class="math">\(a=\frac{1}{x_0-x_2}\)</span>， <span class="math">\(b=\frac{1}{x_2-x_0}\)</span>，可以验证对于<span class="math">\(y_2\)</span>自洽成立。从而，<div class="math">$$I_{0,1,2}(x)=\frac{x-x_2}{x_0-x_2}I_{0,1}(x)+\frac{x-x_0}{x_2-x_0}I_{1,2}(x)$$</div>。<strong>此式即可以看成由两点<span class="math">\((x_0,I_{0,1})，(x_2,I_{1,2})\)</span>的线性插值</strong>。</p>
+<p>&emsp;&emsp;根据n阶Lagrange插值多项式为n次齐次多项式，可以写出如下组合关系：<div class="math">$$I_{0,1,2}=a(x-x_2)I_{0,1}(x)+b(x-x_0)I_{1,2}(x),$$</div>满足<span class="math">\(I_{0,1,2}(x_i)=y_i\)</span>，则由<span class="math">\(y_0和y_1\)</span>可以得到<span class="math">\(a=\frac{1}{x_0-x_2}\)</span>， <span class="math">\(b=\frac{1}{x_2-x_0}\)</span>，可以验证对于<span class="math">\(y_2\)</span>自洽成立。从而，<div class="math">$$I_{0,1,2}(x)=\frac{x-x_2}{x_0-x_2}I_{0,1}(x)+\frac{x-x_0}{x_2-x_0}I_{1,2}(x)$$</div>
+<strong>此式即可以看成由两点<span class="math">\((x_0,I_{0,1})，(x_2,I_{1,2})\)</span>的线性插值</strong>。</p>
 <p>&emsp;&emsp;对于三个点的插值可以写成<span class="math">\(I_{0,1,2}(x)=\frac{(x-x_0)I_{1,2}(x)-(x-x_2)I_{0,1}(x)}{x_2-x_0}\)</span>；一般地，有<div class="math">$$I_{0,1,\cdots,n}(x)=\frac{(x-x_0)I_{1,2,\cdots,n}(x)-(x-x_2)I_{0,1,\cdots,n-1}(x)}{x_2-x_0},n=0,1,\cdots$$</div>
 更一般地，可以任意选取插值节点的顺序，公式表达上用<span class="math">\(x_{i_k}\)</span>来代替<span class="math">\(x_k\)</span>，即<span class="math">\(I_{i_0,i_1,\cdots,i_n}(x)\)</span>。上式可以直观地接受，这里我不打算在数学上详细求证（其实证明起来也并不复杂，已然是次数不超过k的多项式，只需证明其穿过相应节点即可）。把递推关系式写成上面这种形式，是为了给出在一般化的递推关系，具体操作可以是多种多样的，但在实际运用中一般只选用Aitken方法或者Neville方法。也就是说，下面介绍的这两种插值方法实属同一原理，只是在具体的递推操作中选用不同的流程。</p>
 <h2 id="aitken">Aitken方法</h2>
@@ -191,28 +192,47 @@
 <p>&emsp;&emsp;<img alt="Neville interpolation" src="../images/neville.png" /></p>
 <p>可以看出若增加一个节点，便多计算一行，前面的结果可以重复利用，这便于快速应对精度不足的情形。另外，对于选取哪些节点来完成插值也比较自由，有利于自动选并逐步比较精度。Lagrange插值和逐次线性插值的算法复杂度都是<span class="math">\(O(n^2)\)</span>，细致的分析给出逐次线性插值要比Lagrange插值略快几倍。</p>
 <h2 id="python">Python编程实现</h2>
-<p>&emsp;&emsp;对于递推公式表达的问题，可以使用递归算法来编程实现，例如我们把Neville方法中的递推公式写成对称的两项，
-<div class="math">$$I_{0,1,\cdots,k,k+1}(x)=I_{0,1,\cdots,k}(x)\frac{x-x_{k+1}}{x_0-x_{k+1}}+I_{1,\cdots,k,k+1}(x)\frac{x-x_0}{x_{k+1}-x_0},$$</div>
+<p>&emsp;&emsp;对于递推公式表达的问题，可以使用递归算法来编程实现，例如我们把Neville方法中的递推公式写成对称的两项，考虑到通用性我们用<span class="math">\(i_j\)</span>代替<span class="math">\(j\)</span>，
+<div class="math">$$I_{i_0,i_1,\cdots,i_k,i_{k+1}}(x)=I_{i_0,i_1,\cdots,i_k}(x)\frac{x-x_{i_{k+1}}}{x_{i_0}-x_{i_{k+1}}}+I_{i_1,\cdots,i_k,i_{k+1}}(x)\frac{x-x_{i_0}}{x_{i_{k+1}}-x_{i_0}},$$</div>核心是我们用相邻的两项来计算更高一次的插值。
 Python代码如下：</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">neville</span><span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">neville</span><span class="p">(</span><span class="n">xVal</span><span class="p">,</span> <span class="n">yVal</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Polynomial Interpolation: Neville&#39;s Method    </span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_val</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">y_val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">yVal</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">yVal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">I_0</span> <span class="o">=</span> <span class="n">aitken</span><span class="p">(</span><span class="n">x_val</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">y_val</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x_val</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">x_val</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x_val</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">I_n</span> <span class="o">=</span> <span class="n">aitken</span><span class="p">(</span><span class="n">x_val</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">y_val</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x_val</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">x_val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">x_val</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">I_0</span> <span class="o">=</span> <span class="n">aitken</span><span class="p">(</span><span class="n">xVal</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">yVal</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">xVal</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">xVal</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xVal</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">I_n</span> <span class="o">=</span> <span class="n">aitken</span><span class="p">(</span><span class="n">xVal</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">yVal</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">xVal</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">xVal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">xVal</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">I_0</span> <span class="o">+</span> <span class="n">I_n</span>
 
 <span class="c"># example:</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">aitken</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="n">xVal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<span class="n">yVal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">neville</span><span class="p">(</span><span class="n">xVal</span><span class="p">,</span> <span class="n">yVal</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
 <span class="c">#3.33333..</span>
 </pre></div>
 
 
+<p>有时候我觉得递归算法是不直观的实施方式，我们可以直接对照Neville方法的计算表来写代码，对于n个节点，我们更新n次列表，每次计算形式节点数目会减少一个，直到获取目标值。这里我重画了计算示意表格，便于理解数值计算的代码实现。</p>
+<p>&emsp;&emsp;<img alt="Neville interpolation" src="../images/neville2.png" /></p>
+<p>我们可以用二重循环来完成Neville插值（记得Lagrange插值也是二重循环实现，所以复杂度都是<span class="math">\(O(n^2)\)</span>），python代码如下：</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">neville2</span><span class="p">(</span><span class="n">xVal</span><span class="p">,</span> <span class="n">yVal</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Polynomial Interpolation: Neville&#39;s Method</span>
+<span class="sd">    Another implement   </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">xVal</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">yVal</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">):</span>
+            <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">xVal</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">m</span><span class="p">])</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="n">xVal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">xVal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">xVal</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">m</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+
+<p>对于Aitken方法的Python实现，如果有时间再写。</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
