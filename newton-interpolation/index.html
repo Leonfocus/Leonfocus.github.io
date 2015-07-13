@@ -31,7 +31,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">    
     
-        <link rel="alternate"  href="http://leonfocus.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
+        <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
         <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
         <title>Leon's Blog - Newton插值法</title>
@@ -44,8 +44,8 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <!--<![endif]-->
-    <link rel="stylesheet" href="/theme/css/styles.css">
-    <link rel="stylesheet" href="/theme/css/pygments.css">
+    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/styles.css">
+    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/pygments.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
@@ -127,9 +127,9 @@
                  <div class="pure-menu pure-menu-open pure-menu-horizontal">
 <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/muse/">Muse</a></li>
         <li><a href="/practice/">Practice</a></li>
-        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/contact/">Contact</a></li>
 </ul>                </div>
             </div>
         </div>
@@ -179,10 +179,13 @@
 <span class="math">\(f(x)\)</span>在点<span class="math">\(x_i,x_j，x_k\)</span>的二阶差商（也就是差商的差商）<div class="math">$$f[x_i,x_j,x_k]=\frac{f[x_i,x_j]-f[x_j,x_k]}{x_i-x_k}$$</div>
 以此类推，<span class="math">\(f(x)\)</span>在点<span class="math">\(x_0,x_1,\cdots,x_k\)</span>的k阶差商（即k-1阶差商的差商）
 <div class="math">$$f[x_0,x_1,\cdots,x_k]=\frac{f[x_0,x_1,\cdots,x_{k-1}]-f[x_1,x_2,\cdots,x_k]}{x_0-x_k}$$</div>
-差商的定义非常简单，其具有如下性质：
-1. k阶差商可由函数值<span class="math">\(f(x_0),f(x_1),\cdots,f(x_k)\)</span>线性组合表示，且<div class="math">$$f[x_0,x_1,\cdots,x_k]=\sum^k_{i=0}\frac{f(x_i)}{(x_i-x_0)\cdots(x_i-x_{i-1})(x_i-x_{i+1})\cdots(x_i-x_k)}$$</div>
-2. 差商具有轮换对称性，即任意调换节点的次序，差商值不变，例如<span class="math">\(f[x_0,x_1,x_2]=f[x_1,x_0,x_2]=f[x_2,x_1,x_0]\)</span>.
-3. 如果$f(x)是x的n次多项式，则k阶差商是n-k次多项式，k&gt;n时差商为零.</p>
+差商的定义非常简单，其具有如下性质：</p>
+<ol>
+<li>k阶差商可由函数值<span class="math">\(f(x_0),f(x_1),\cdots,f(x_k)\)</span>线性组合表示，且<div class="math">$$f[x_0,x_1,\cdots,x_k]=\sum^k_{i=0}\frac{f(x_i)}{(x_i-x_0)\cdots(x_i-x_{i-1})(x_i-x_{i+1})\cdots(x_i-x_k)}$$</div>
+</li>
+<li>差商具有轮换对称性，即任意调换节点的次序，差商值不变，例如<span class="math">\(f[x_0,x_1,x_2]=f[x_1,x_0,x_2]=f[x_2,x_1,x_0]\)</span>.</li>
+<li>如果$f(x)是x的n次多项式，则k阶差商是n-k次多项式，k&gt;n时差商为零.</li>
+</ol>
 <p>&emsp;&emsp;显而易见，差商也是用递推关系来定义的，我们可以用表格（差商表）来展示其计算过程：</p>
 <p>&emsp;&emsp;<img alt="Newton interpolation" src="../images/newton.png" /></p>
 <p>&emsp;&emsp;现在我们再继续讨论Newton插值公式，有了差商概念之后，我们将待定系数写成 <span class="math">\(a_k=f[x_0,x_1,\cdots,x_k]\)</span>, 也就是说Newton插值多项式的组合系数为差商形式。由此，<span class="math">\(f(x)\)</span>关于节点<span class="math">\(x_i\)</span>的n次Newton插值多项式写为
@@ -203,6 +206,7 @@ f(x) &amp;= f(x_0)+f[x,x_0](x-x_0)\\
 另外，我们可以直接写出递推式
 <div class="math">$$N_{n+1}(x)=N_n(x)+f[x_0,x_1,\cdots,x_{n+1}]P_{n+1}(x)$$</div>
 一般可以将得到如下估计误差的使用公式 <span class="math">\(R_n(x)\approx f[x_0,x_1,\cdots,x_{n+1}]P_{n+1}(x)\)</span>.</p>
+<p>&emsp;&emsp;实际上，Newton插值与逐次线性插值在节点逐步增加时，计算公式的每一步都是等价的。但是更一般地来说，Newton插值在计算多个<span class="math">\(x\)</span>点时需要重新计算的相对较少。</p>
 <h2 id="_2">差分</h2>
 <p>&emsp;&emsp;与差商密切相关的另一个概念是差分，它是指在等距节点上函数值的差，引进这一概念的目的是为了回答以下问题：“在某些特殊的情形是否可以简化Newton插值?”所谓等距节点，是指对给定的常数<span class="math">\(h\)</span>（称为步长），节点<span class="math">\(x_i=x_0+ih\)</span>, <span class="math">\(i=0,1,\cdots,n\)</span>，称<span class="math">\(\Delta f_i \equiv f(x_{i+1})-f(x_i)\)</span> 为<span class="math">\(f(x)\)</span>在<span class="math">\(x_i\)</span>处的一阶向前差分；<span class="math">\(\nabla f_i \equiv f(x_{i})-f(x_{i-1})\)</span> 为<span class="math">\(f(x)\)</span>在<span class="math">\(x_i\)</span>处的一阶向后差分。<span class="math">\(\Delta^2 f_i \equiv \Delta f(x_{i+1})-\Delta f(x_i)\)</span> 为<span class="math">\(f(x)\)</span>在<span class="math">\(x_i\)</span>处的二阶向前差分；<span class="math">\(\nabla^2 f_i \equiv \nabla f(x_{i})-\nabla f(x_{i-1})\)</span> 为<span class="math">\(f(x)\)</span>在<span class="math">\(x_i\)</span>处的二阶向后差分。依此类推，<div class="math">$$\Delta^m f_i \equiv \Delta^{m-1} f(x_{i+1})-\Delta^{m-1} f(x_i)$$</div> 为<span class="math">\(f(x)\)</span>在<span class="math">\(x_i\)</span>处的m阶向前差分；<div class="math">$$\nabla^m f_i \equiv \nabla^{m-1} f(x_{i})-\nabla^{m-1} f(x_{i-1})$$</div> 为<span class="math">\(f(x)\)</span>在<span class="math">\(x_i\)</span>处的m阶向后差分。可以看出，m阶向前差分是从<span class="math">\(f(x_i)\)</span>开始，上溯m个函数值到<span class="math">\(f(x_{i+m})\)</span>；而m阶向后差分是从<span class="math">\(f(x_i)\)</span>开始，下溯m个函数值到<span class="math">\(f(x_{i-m})\)</span>。我们得出（可以用数学归纳法证明，但从理解上比较直观）向前差分和向后差分有以下关系式：<span class="math">\(\Delta^m f_i = \nabla^m f_{i+m}\)</span>，例如：<span class="math">\(\Delta f_i = \nabla f_{i+1}\)</span>，<span class="math">\(\Delta^2 f_i = \nabla^2 f_{i+2}\)</span>。由此，我们给出如下差分表：</p>
 <p>&emsp;&emsp;<img alt="Newton interpolation" src="../images/newton2.png" /></p>
@@ -222,8 +226,8 @@ f(x) &amp;= f(x_0)+f[x,x_0](x-x_0)\\
 N_n(x_0+th) &amp;= f(x_0)+\sum^n_{k=1}[\frac{\Delta^k f_0}{k!h^k} \prod^{k-1}_{j=0}(t-j)h]\\
          &amp;= f(x_0)+\sum^n_{k=1}[\frac{\Delta^k f_0}{k!} \prod^{k-1}_{j=0}(t-j)]
 \end{align*}</div>
-余项化为<div class="math">$$R_n(x_0+th)=\frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}\prod^{k-1}_{j=0}(t-j)$$</div>
-当然，我们由此Newton向前差分插值公式可以直接得到向后差分插值公式，只需要用<span class="math">\(\nabla^k f_{n}\)</span>替换<span class="math">\(\Delta^k f_0\)</span>即可。</p>
+余项化为<div class="math">$$R_n(x_0+th)=\frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}\prod^{n}_{j=0}(t-j)$$</div>
+当然，我们由此Newton向前插值公式可以直接得到向后插值公式，只需要用<span class="math">\(\nabla^k f_{n}\)</span>替换<span class="math">\(\Delta^k f_0\)</span>，<span class="math">\((t-j)\)</span>换成<span class="math">\((t+j)\)</span>即可。</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
@@ -299,7 +303,7 @@ N_n(x_0+th) &amp;= f(x_0)+\sum^n_{k=1}[\frac{\Delta^k f_0}{k!h^k} \prod^{k-1}_{j
         <footer id="footer" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
                 <div>
-                    <p>&copy;2014 <a href="">Leon Chang</a> &ndash;
+                    <p>&copy;2014 <a href="http://leonfocus.github.io">Leon Chang</a> &ndash;
                         Modified from Rossant's <a href="https://github.com/PurePelicanTheme/pure-single" target="_blank">Pure</a> Theme
                         for <a href="http://blog.getpelican.com/" target="_blank">Pelican</a>
                     </p>

@@ -34,7 +34,7 @@
         <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
         <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
-        <title>Leon's Blog</title>
+        <title>Leon's Blog - Hermite插值法</title>
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -152,27 +152,114 @@
     <div id="layout" class="pure-g">
         <section id="content" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
-    <h1 class="content-subhead">All posts</h1>
-        <div class="archive-item">
-            <h5 class="archive-date">2014</h5>
-            <h4 class="archive-date">13 十月</h4>
-            <div class="archive-post"><a href="why-physicist-need-python/">Why physics students and physicists need python?</a></div>
-        </div>
-        <div class="archive-item">
-            <h5 class="archive-date">2014</h5>
-            <h4 class="archive-date">11 十月</h4>
-            <div class="archive-post"><a href="thermal-motion-concept/">浅析热运动</a></div>
-        </div>
-        <div class="archive-item">
-            <h5 class="archive-date">2014</h5>
-            <h4 class="archive-date">08 十月</h4>
-            <div class="archive-post"><a href="markdown-and-latex-equation-handbook/">Markdown语法和LaTeX数学记号速查手册</a></div>
-        </div>
-        <div class="archive-item">
-            <h5 class="archive-date">2014</h5>
-            <h4 class="archive-date">04 十月</h4>
-            <div class="archive-post"><a href="this-blog/">This blog</a></div>
-        </div>
+
+    <header id="page-header">
+        <h1>Hermite插值法</h1>
+            <div class="post-meta">
+                    十二月 11, 2014
+                </div>
+                <div class="post-tags">
+                    <ul>
+                        <li>tags:</li>
+                        <li><a href="/tag/numerical/">numerical</a></li>
+                        <li><a href="/tag/python/">python</a></li>
+                    </ul>
+                </div>    
+    </header>
+
+    <section id="page">
+        <p>&emsp;&emsp;考察Lagrange和Newton插值多项式时我们限定的插值条件分别是<span class="math">\(L_n(x_i)=f(x_i)\)</span>和<span class="math">\(N_n(x_i)=f(x_i)\)</span>，也就是说我们要求插值多项式在插值节点处是精确的，但在不少实际问题中需要其在节点处的导数值也精确。导数意味着光滑度，越高阶的导数连续说明节点处越光滑。一般这种对导数值也有要求的插值问题称为Hermite插值，通常研究的是带一阶导数条件的插值。例如，物理学中波跨越界面时，边值条件要求值连续且一阶导连续。解决Hermite插值仍采用的是Lagrange插值多项式基函数的方法。</p>
+<p>&emsp;&emsp;给定<span class="math">\(f(x)\)</span>在插值节点<span class="math">\(x_0,x_1,\cdots,x_n\)</span>出的函数值<span class="math">\(y_0,y_1,\cdots,y_n\)</span>及相应的一阶导数<span class="math">\(y'_0,y'_1,\cdots,y'_n\)</span>，要求满足以下插值条件
+<div class="math">$$H_{2n+1}(x_i)=y_i=f(x_i),H_{2n+1}(x_i)=y'_i=f'(x_i),(i=0,1,\cdots,n)$$</div>
+的次数不超过2n+1的插值多项式<span class="math">\(H_{2n+1}(x)\)</span>。设<div class="math">$$H_{2n+1}(x)=\sum^n_{j=0}\alpha_j(x)y_j+\sum^n_{j=0}\beta_j(x)y'_j$$</div>
+其中，<span class="math">\(\alpha_j(x), \beta_k(x)\)</span>为2n+2个基函数，且均为次数不超过2n+1的代数多项式，满足
+<div class="math">$$\left\{
+    \begin{array}{ll}
+        \alpha_j(x_i)=\delta_{ij}=\{
+                \begin{array}{ll}
+                    1 &amp;j=i\\
+                    0 &amp;j\ne i\\
+                \end{array}\\
+        \alpha'_j(x_i)=0, i=0,1,2,\cdots,n\\
+        \beta_j(x_i)=0, i=0,1,2,\cdots,n\\
+        \beta'_j(x_i)=\delta_{ij}=\{
+                \begin{array}{ll}
+                    1 &amp;j=i\\
+                    0 &amp;j\ne i\\
+                \end{array}\\
+    \end{array}
+    \right.$$</div>
+根据多项式零点的性质，我们可以设定<span class="math">\(\alpha_j(x)\)</span>和<span class="math">\(\beta_j(x)\)</span>的形式。对<span class="math">\(\alpha_j(x)\)</span>，除<span class="math">\(x_j\)</span>外其他节点皆为其二重零点，故可以构造出
+<div class="math">\begin{align*}
+\alpha_j(x)&amp;=C(x)\frac{(x-x_0)^2(x-x_1)^2\cdots(x-x_{j-1})^2(x-x_{j+1})^2\cdots(x-x_n)^2}{(x_j-x_0)^2(x_j-x_1)^2\cdots(x_j-x_{j-1})^2(x_j-x_{j+1})^2\cdots(x_j-x_n)^2}\\
+&amp;=C(x)\ell^2_j(x)
+\end{align*}</div>
+由于<span class="math">\(\alpha_j(x)\)</span>是2n+1次多项式，故C(x)只能是一次式，可令C(x)=Ax+B，即 <span class="math">\(\alpha_j(x)=(Ax+B)\ell^2_j(x)\)</span>，有
+<div class="math">$$\left\{
+    \begin{array}{ll}
+        Ax_j+B=1\\
+        A+2(Ax_j+B)\ell'_j(x_j)=0\\
+    \end{array}
+    \right.$$</div>
+故得 <span class="math">\(\alpha_j(x)=(1+2(x_j-x)\ell'_j(x_j))\ell^2_j(x)\)</span>.同样地，对<span class="math">\(\beta_j(x)\)</span>，<span class="math">\(x_j\)</span>为一重零点，外其他节点皆为其二重零点，构造
+<div class="math">\begin{align*}
+\beta_j(x)&amp;=C(x-x_j)\frac{(x-x_0)^2(x-x_1)^2\cdots(x-x_{j-1})^2(x-x_{j+1})^2\cdots(x-x_n)^2}{(x_j-x_0)^2(x_j-x_1)^2\cdots(x_j-x_{j-1})^2(x_j-x_{j+1})^2\cdots(x_j-x_n)^2}\\
+&amp;=C(x-x_i)\ell^2_j(x)
+\end{align*}</div>
+由于<span class="math">\(\beta_j(x)\)</span>是2n+1次多项式，故C是常数。利用<span class="math">\(\beta'_j(x_j)=1\)</span>可得C=1，从而 <span class="math">\(\beta_j(x)=(x-x_j)\ell^2_j(x)\)</span>. 确定了<span class="math">\(\alpha_j(x)\)</span>和<span class="math">\(\beta_j(x)\)</span>的形式后，有
+<div class="math">$$H_{2n+1}(x)=\sum^n_{j=0}(y_j+(x-x_j)(y'_j-2y_j\ell'_j(x_j))\ell^2_j(x),$$</div>
+其中<span class="math">\(\ell_j(x)\)</span>为Lagrange插值基函数。可以直接求导知
+<div class="math">\begin{align*}
+\ell'_j(x_j)&amp;=\frac{1}{(x_j-x_0)}+\cdots+\frac{1}{(x_j-x_{j-1})}+\frac{1}{(x_j-x_{j+1})}+\cdots+\frac{1}{(x_j-x_n)}\\
+&amp;=\sum^n_{i=1,i\ne j}\frac{1}{x_j-x_i}
+\end{align*}</div>
+另外，Hermite插值余项为<div class="math">$$R(x)=f(x)-H_{2n+1}(x)=\frac{1}{(2n+2)!f^(2n+2)(\xi)P_{n+1}^2(x)}$$</div>
+</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+    </section>
+    
+    <aside class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "leonfocus"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </aside>
             </div>
         </section>
         
