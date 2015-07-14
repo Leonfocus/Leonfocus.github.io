@@ -632,7 +632,9 @@
 &lt;li&gt;Default Pages or Pages: three menu-linked ones here&lt;/li&gt;
 &lt;li&gt;Custom Pages or Posts: looks like articles, but not list in index&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Moreover, I have customed the tag.html and page.html templates to make the tagged pages be also listed in the related tag entry.
-+ 2015-07-13：Reorginazed the menu and the content&lt;/p&gt;
+&lt;p&gt;Moreover, I have customed the tag.html and page.html templates to make the tagged pages be also listed in the related tag entry.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2015-07-13：Reorginazed the menu and the content&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary><category term="pelican"></category></entry></feed>
