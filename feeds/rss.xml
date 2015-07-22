@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Leon's Blog</title><link>http://leonfocus.github.io/</link><description></description><atom:link href="http://leonfocus.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 15 Oct 2014 00:00:00 +0800</lastBuildDate><item><title>Why physics students and physicists need python?</title><link>http://leonfocus.github.io/why-physicist-need-python/</link><description>&lt;p&gt;Nowadays, the &lt;a href="https://www.python.org/" target="_blank"&gt;Python&lt;/a&gt; language has become a widely used tool for scientists and engineers, which is fully stacked with powerful support packages, such as numpy and scipy. However, I came across Python due to the need of an easy-to-use web framework until last summer. After several days of trails, I found Python was such an elegent and easy-to-learn language. So I immediately got out of PHP and turned to Python for the purpose of Web programming. When I realized its capability for scientific computing three months ago, I decided to dig deeper into it.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Leon's Blog</title><link>http://leonfocus.github.io/</link><description></description><atom:link href="http://leonfocus.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 18 Jul 2015 00:00:00 +0800</lastBuildDate><item><title>未名的诗</title><link>http://leonfocus.github.io/unnamed-peom/</link><description>
+
+&lt;p&gt;题注：前天晚上，翻到几首小诗，誊抄在这。只有第一首有题目，其他几乎都是以类似于“燕园速写”为题，故皆集于此。以“未名”为题也妥当，切情切景，园子里是流传着一句诗文的：未名湖是个海洋，诗人都藏在水底。我虽然不能成为诗人，但谁也不能阻止我瞎写啊。另外，此页的存在也有助于我寻找那些曾经遗失的文字
+。&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;——错过的人，像写过的诗&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;《未名·桃花雪》，2013-03-21&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;料峭寒，风欲暖，端坐清池闲。弄冰镜，露态寒，红粉初上，独自莫凭栏。&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;玉尘子，散琼花，燕支起芳华。香如雾，作娇步，仙庵低语，只道梦期佳。&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;《写于燕园》，2013-09-06&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;昨日东窗忽落雨，秋风一袭满故园。旧音不在颜俱老，天独无情冷人间。&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;《燕园一首》，2013-11-24&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;临轩湖水遮晓雾，不见塔影路亦无。道是秋来颜色好，叶落谁问风知著。&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;《夜寄思》，2014-08-20&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;风对清露饮，月动影孤行。非是思人故？一夜听蝉鸣。&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;《或非偶得》，2015-06-10&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;一切都已停止/不是死寂/而是冰凝/堵住的宣泄口/挣扎的心/在苦楚的泪水中/滋润，新生&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Leon Chang</dc:creator><pubDate>Sat, 18 Jul 2015 00:00:00 +0800</pubDate><guid>tag:leonfocus.github.io,2015-07-18:unnamed-peom/</guid><category>muse</category><category>essay</category><category>poetry</category></item><item><title>Why physics students and physicists need python?</title><link>http://leonfocus.github.io/why-physicist-need-python/</link><description>&lt;p&gt;Nowadays, the &lt;a href="https://www.python.org/" target="_blank"&gt;Python&lt;/a&gt; language has become a widely used tool for scientists and engineers, which is fully stacked with powerful support packages, such as numpy and scipy. However, I came across Python due to the need of an easy-to-use web framework until last summer. After several days of trails, I found Python was such an elegent and easy-to-learn language. So I immediately got out of PHP and turned to Python for the purpose of Web programming. When I realized its capability for scientific computing three months ago, I decided to dig deeper into it.&lt;/p&gt;
 &lt;p&gt;Why python for physics? In other words, why Python language is suitable for physics students or physicists? &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Computer skills are called. &lt;/li&gt;
