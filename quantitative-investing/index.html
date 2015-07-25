@@ -34,7 +34,7 @@
         <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
         <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
-        <title>Leon's Blog</title>
+        <title>Leon's Blog - 量化投资与Python</title>
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -52,6 +52,12 @@
     
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     
     
         <style>  
@@ -152,50 +158,66 @@
     <div id="layout" class="pure-g">
         <section id="content" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
-    <section id="posts">
 
-        <header id="posts-header">
-            <h1>Leon's Blog</h1>
-        </header>
+    <header id="post-header">
+        <h1>量化投资与Python</h1>
+            <div class="post-meta">
+                七月 25, 2015
+            </div>
+            <div class="post-tags">
+                <ul>
+                    <li>tags:</li>
+                    <li><a href="/tag/finance/">finance</a></li>
+                    <li><a href="/tag/python/">python</a></li>
+                    <li><a href="/tag/numerical/">numerical</a></li>
+                </ul>
+            </div>
+    </header>
 
-    <section class="post">
-        <header class="post-header">
-            <h3><a href="http://leonfocus.github.io/markdown-and-latex-equation-handbook/">Markdown语法和LaTeX数学记号速查手册</a></h3>
-            <p class="sub-header-3">2014-10-08</p>
-            <p class="post-summary">
-这篇文章是Markdown和LaTex的速查手册，阅读人群为科学工作者，尤其是物理领域的同行。常用的Markdown语法和数学符号、公式的LaTex的记号都列举在文中。本手册的用例如，Ipython Notebook或者支持Markdownd的博客。如果读者需要用到高级的技巧或完整的LaTex语法，请直接参与其官方文档。简而言之，我写本手册时权衡了完整和快查两个需求，力求简明而不简单
-...</p>
-        </header>
-        <div class="read-more">
-            <a class="pure-button" href="http://leonfocus.github.io/markdown-and-latex-equation-handbook/">
-                Read on
-            </a>
-        </div>
+    <section id="post">
+        
+
+<p>&emsp;&emsp;金融对个体而言无非是套利，好处是可以优化整个社会资源的配置。定量投资不同于定性投资，其基于数理模型的判断。从哲学上讲，定性投资的思路更广，但难以做回报分析；定量化对某些投资理念建模，克服了主观判断的偏差。纵观整个市场，投资理念是不断演进和相互博弈的，所以不会有终极的模型。市场波动，人性不变，量化投资并非要用冰冷的模型去感受市场的温度，而是要消除个体的成见和情绪
+。</p>
+<p>&emsp;&emsp;虽然我学过经济学的基本知识，但对投资还一窍不通。我不打算直接阅读量化投资的书（浩如烟海且枯燥），而是从Python数据分析和模型化着手去实践（短期内我可能介于技术分析和量化投资之间）。为什么我想发起这样一个项目呢，有几个初衷：</p>
+<ol>
+<li>探究一下国外的量化投资者在干嘛，理念靠不靠谱，数学是否被滥用；</li>
+<li>最终未必会量化建模，但可对数据进行程序化处理以减轻股票复盘的时间；</li>
+<li>对国内市场可能出现的量化投资思潮做准备；</li>
+</ol>
+<p>项目进展：</p>
+<p>I. 小白养成记：</p>
     </section>
-        <hr />
-    <section class="post">
-        <header class="post-header">
-            <h3><a href="http://leonfocus.github.io/this-blog/">This blog</a></h3>
-            <p class="sub-header-3">2014-10-04</p>
-            <p class="post-summary"><p>My new static blog was launched during this National day using <a href="http://blog.getpelican.com/" target="_blank">Pelican</a> and <a href="https://pages.github.com/" target="_blank">Github</a>. With lots of trials in these two days, this website works finally. Since I am a newbie, I just take many things from other guys (Thanks!). This theme is mainly taken from <a href="http://cyrille.rossant.net/" target="_blank">Cyrille Rossant's blog</a>, which is modified from <a href="https://github.com/PurePelicanTheme/pure-single" target="_blank">Pure</a> theme. Although some small changes have been made from Rossant's, yet I wanna tweak ...</p></p>
-        </header>
-        <div class="read-more">
-            <a class="pure-button" href="http://leonfocus.github.io/this-blog/">
-                Read on
-            </a>
-        </div>
-    </section>
+
 
 <nav class="pagination-wrapper">
     <div class="pagination">
         <div class="pagination-left">
-                <a href="http://leonfocus.github.io/"><span>&larr; previous</span></a>
         </div>
-        <span>Page 2 / 2</span>
         <div class="pagination-right">
+                <a href="http://leonfocus.github.io/is-the-world-understandable/">
+                    next&nbsp;&rarr;
+                </a>
         </div>
     </div>
-</nav>    </section>
+</nav>
+    <aside class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "leonfocus"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </aside>
+
             </div>
         </section>
         

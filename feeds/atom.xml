@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Leon's Blog</title><link href="http://leonfocus.github.io/" rel="alternate"></link><link href="http://leonfocus.github.io/feeds/atom.xml" rel="self"></link><id>http://leonfocus.github.io/</id><updated>2015-07-24T00:00:00+08:00</updated><entry><title>不确定性与不可知论</title><link href="http://leonfocus.github.io/is-the-world-understandable/" rel="alternate"></link><updated>2015-07-24T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:leonfocus.github.io,2015-07-22:is-the-world-understandable/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Leon's Blog</title><link href="http://leonfocus.github.io/" rel="alternate"></link><link href="http://leonfocus.github.io/feeds/atom.xml" rel="self"></link><id>http://leonfocus.github.io/</id><updated>2015-07-25T00:00:00+08:00</updated><entry><title>量化投资与Python</title><link href="http://leonfocus.github.io/quantitative-investing/" rel="alternate"></link><updated>2015-07-25T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:leonfocus.github.io,2015-07-25:quantitative-investing/</id><summary type="html">
+
+&lt;p&gt;&amp;emsp;&amp;emsp;金融对个体而言无非是套利，好处是可以优化整个社会资源的配置。定量投资不同于定性投资，其基于数理模型的判断。从哲学上讲，定性投资的思路更广，但难以做回报分析；定量化对某些投资理念建模，克服了主观判断的偏差。纵观整个市场，投资理念是不断演进和相互博弈的，所以不会有终极的模型。市场波动，人性不变，量化投资并非要用冰冷的模型去感受市场的温度，而是要消除个体的成见和情绪
+。&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;虽然我学过经济学的基本知识，但对投资还一窍不通。我不打算直接阅读量化投资的书（浩如烟海且枯燥），而是从Python数据分析和模型化着手去实践（短期内我可能介于技术分析和量化投资之间）。为什么我想发起这样一个项目呢，有几个初衷：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;探究一下国外的量化投资者在干嘛，理念靠不靠谱，数学是否被滥用；&lt;/li&gt;
+&lt;li&gt;最终未必会量化建模，但可对数据进行程序化处理以减轻股票复盘的时间；&lt;/li&gt;
+&lt;li&gt;对国内市场可能出现的量化投资思潮做准备；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;项目进展：&lt;/p&gt;
+&lt;p&gt;I. 小白养成记：&lt;/p&gt;</summary><category term="finance"></category><category term="python"></category><category term="numerical"></category></entry><entry><title>不确定性与不可知论</title><link href="http://leonfocus.github.io/is-the-world-understandable/" rel="alternate"></link><updated>2015-07-24T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:leonfocus.github.io,2015-07-22:is-the-world-understandable/</id><summary type="html">
 
 &lt;p&gt;&amp;emsp;&amp;emsp;牛顿的静态、机械的宇宙观蕴含着决定论，到拉普拉斯时为甚，他认为只要能收集到宇宙运行的足够数据，就可以预测宇宙的未来。抛开哲学思辨的探讨，决定论真正受到严肃的科学挑战是上世纪量子论的发展。量子理论的诞生不仅在科学上是一次开天辟地的大事，在哲学上也不同凡响：一方面，过去哲学中休眠的观念又有了生命活力，例如客观实在性
 ；另一方面，量子理论很难理解，似乎突破了人类哲思的极限。实际上，连不少物理学家也直言不懂量子论的深刻内涵，虽然受过训练的物理学工作者可以运用它，但难以直观地想象。我的辩护是，在某种意义上而言，科学可以告诉我们“是什么”，但未必能解答“为什么”。牛顿就是在追寻终极的“为什么”时，回归到上帝的“第一推动力”。宗教在解决人类的苦难和无助时，也选择了全知全能的神。人类需要理由来抚慰不安的内心。&lt;/p&gt;
@@ -39,7 +50,9 @@
 &lt;p&gt;&amp;emsp;&amp;emsp;物理学家已经开始设计实验来验证自由意志的存在（目前来说，结果是积极的），我也情愿相信其存在。我们的自由意志可以对自然界产生影响，也就说人类的活动会改变历史的进程、宇宙的演化。&lt;/p&gt;
 &lt;h3 id="_8"&gt;我们低能吗&lt;/h3&gt;
 &lt;p&gt;&amp;emsp;&amp;emsp;我从这个问题开始，也从这个问题结束。人类这种弱小的肉虫能否突破自身的局限认识这个无垠的宇宙——人生有限，宇宙无限；人的活动范围有限，宇宙有限——人，能否将其活动的时空拓展到整个宇宙？我们相信自己的能力吗？这是完全不对等的比较。我思考人类区别于其他物种的特点，想到两个：文字和工具。人类用文字来记录整个种群的智慧，传递和积累，突破个体寿命的界限。工具的使用得以突破肉体器官的局限，上天入地下海，未来翱翔于星际，打破了空间的束缚。从这种意义上讲，人类是了不起的。我中学时代乃至到大学，我常问自己：如果一个大肠杆菌号称你了解地球的半径，你觉得有可能吗？后来我觉得，人类毕竟不是大肠杆菌。人类确实是有灵性的物种。有些文学家和哲学家时常陷入对人类智慧的迷恋中不能自拨，我也不敢为人类的未来设限。只是人类生活在这个不确定的宇宙中，能走多远，是个未知数。在漫长的演进过程中，人类与宇宙同在，期间会遇到种种概率事件，人类真的每次都可以化险为夷吗？人类未必毁在自然的灾难中，人类可以自己毁掉自己。或许，在无数个平行宇宙中，有的类人物种找到了终极规律的钥匙，有的类人物种很快就灭亡，我希望人类是幸运的。虽然人类未必能了解整个宇宙，但我们逐渐地了解更多了，这个问题的答案不重要，重要的是人类的愿望和出现的痕迹。&lt;/p&gt;
-&lt;p&gt;注：尚未通稿修改，休息一会。&lt;/p&gt;</summary><category term="physcics"></category><category term="muse"></category></entry><entry><title>未名的诗</title><link href="http://leonfocus.github.io/unnamed-peom/" rel="alternate"></link><updated>2015-07-18T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:leonfocus.github.io,2015-07-18:unnamed-peom/</id><summary type="html">
+&lt;blockquote&gt;
+&lt;p&gt;注：尚未通稿修改，休息一会。&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="physcics"></category><category term="muse"></category></entry><entry><title>未名的诗</title><link href="http://leonfocus.github.io/unnamed-peom/" rel="alternate"></link><updated>2015-07-18T00:00:00+08:00</updated><author><name>Leon Chang</name></author><id>tag:leonfocus.github.io,2015-07-18:unnamed-peom/</id><summary type="html">
 
 &lt;p&gt;题注：前天晚上，翻到几首小诗，誊抄在这。只有第一首有题目，其他几乎都是以类似于“燕园速写”为题，故皆集于此。以“未名”为题也妥当，切情切景，园子里是流传着一句诗文的：未名湖是个海洋，诗人都藏在水底。我虽然不能成为诗人，但谁也不能阻止我瞎写啊。另外，此页的存在也有助于我寻找那些曾经遗失的文字
 。&lt;/p&gt;
