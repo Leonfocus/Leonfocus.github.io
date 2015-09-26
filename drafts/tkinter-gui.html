@@ -34,7 +34,7 @@
         <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
         <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
-        <title>Leon's Blog</title>
+        <title>Leon's Blog - Tkinter GUI编程实践与入门指南</title>
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -52,6 +52,12 @@
     
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
     
     
         <style>  
@@ -152,50 +158,54 @@
     <div id="layout" class="pure-g">
         <section id="content" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
-    <section id="posts">
 
-        <header id="posts-header">
-            <h1>Leon's Blog</h1>
-        </header>
+    <header id="post-header">
+        <h1>Tkinter GUI编程实践与入门指南</h1>
+            <div class="post-meta">
+                八月 30, 2015
+            </div>
+            <div class="post-tags">
+                <ul>
+                    <li>tags:</li>
+                    <li><a href="/tag/python/">python</a></li>
+                    <li><a href="/tag/GUI/">GUI</a></li>
+                    <li><a href="/tag/tkinter/">tkinter</a></li>
+                </ul>
+            </div>
+    </header>
 
-    <section class="post">
-        <header class="post-header">
-            <h3><a href="http://leonfocus.github.io/markdown-and-latex-equation-handbook/">Markdown语法和LaTeX数学记号速查手册</a></h3>
-            <p class="sub-header-3">2014-10-08</p>
-            <p class="post-summary">
-这篇文章是Markdown和LaTex的速查手册，阅读人群为科学工作者，尤其是物理领域的同行。常用的Markdown语法和数学符号、公式的LaTex的记号都列举在文中。本手册的用例如，Ipython Notebook或者支持Markdownd的博客。如果读者需要用到高级的技巧或完整的LaTex语法，请直接参与其官方文档。简而言之，我写本手册时权衡了完整和快查两个需求，力求简明而不简单
-...</p>
-        </header>
-        <div class="read-more">
-            <a class="pure-button" href="http://leonfocus.github.io/markdown-and-latex-equation-handbook/">
-                Read on
-            </a>
-        </div>
+    <section id="post">
+        <p>Tkinter是Python内建的GUI库，简单易学。上周我用了三天时间实现了自己的第一个GUI应用——Data Preview，在编写过程中我发现tkinter的中文资料不多，且比较零散，本文是我的个人总结，同时也有意写成新手入门指南的风格，本文预计会不断更新以使架构更加合理，行文更加流畅易懂。</p>
+<p>GUI（图形用户界面）应用其实非常适合用面向对象（OOP）的编程范式来组织代码，虽然在网络上搜索到的诸多代码片段都是用快速的方式来调用tkinter库，但是这不利于较大的GUI编写。tkinter标准库封装了Tk/Tcl语言，实际上我并不了解，但无碍于我们写一个真实世界的GUI应用（不然封装API干嘛）。可以想象，整个GUI程序就是个父对象，其包含的一些控件（widgets）是子对象，对象的属性可以呈现出可见的状态，当我们通过鼠标或键盘等方式输入时，这些事件（event-driven）会调用对象的方法（即一些函数）来完成对象属性的改变和对象间消息的传递，于是我们看到GUI的外观刷新了。在我写Data Preview的过程中，我理解了GUI的抽象逻辑，所以重构过一次代码，这对编写复杂的GUI应用会有帮助。</p>
     </section>
-        <hr />
-    <section class="post">
-        <header class="post-header">
-            <h3><a href="http://leonfocus.github.io/this-blog/">This blog</a></h3>
-            <p class="sub-header-3">2014-10-04</p>
-            <p class="post-summary"><p>My new static blog was launched during this National day using <a href="http://blog.getpelican.com/" target="_blank">Pelican</a> and <a href="https://pages.github.com/" target="_blank">Github</a>. With lots of trials in these two days, this website works finally. Since I am a newbie, I just take many things from other guys (Thanks!). This theme is mainly taken from <a href="http://cyrille.rossant.net/" target="_blank">Cyrille Rossant's blog</a>, which is modified from <a href="https://github.com/PurePelicanTheme/pure-single" target="_blank">Pure</a> theme. Although some small changes have been made from Rossant's, yet I wanna tweak ...</p></p>
-        </header>
-        <div class="read-more">
-            <a class="pure-button" href="http://leonfocus.github.io/this-blog/">
-                Read on
-            </a>
-        </div>
-    </section>
+
 
 <nav class="pagination-wrapper">
     <div class="pagination">
         <div class="pagination-left">
-                <a href="http://leonfocus.github.io/"><span>&larr; previous</span></a>
         </div>
-        <span>Page 2 / 2</span>
         <div class="pagination-right">
+                &nbsp;
         </div>
     </div>
-</nav>    </section>
+</nav>
+    <aside class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "leonfocus"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </aside>
+
             </div>
         </section>
         

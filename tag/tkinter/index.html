@@ -31,8 +31,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">    
     
-        <link rel="alternate"  href="http://leonfocus.github.io/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
-        <link rel="alternate" href="http://leonfocus.github.io/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
+        <link rel="alternate"  href="/feeds/atom.xml" type="application/atom+xml" title="Leon's Blog Full Atom Feed"/>
+        <link rel="alternate" href="/feeds/rss.xml" type="application/rss+xml" title="Leon's Blog Full RSS Feed"/>
 
         <title>Leon's Blog</title>
 
@@ -44,8 +44,8 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
     <!--<![endif]-->
-    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/styles.css">
-    <link rel="stylesheet" href="http://leonfocus.github.io/theme/css/pygments.css">
+    <link rel="stylesheet" href="/theme/css/styles.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
@@ -152,35 +152,22 @@
     <div id="layout" class="pure-g">
         <section id="content" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
-    <section id="posts">
+    <section id="tag-posts">
 
-        <header id="posts-header">
-            <h1>Leon's Blog</h1>
+        <header id="tag-header">
+            <h1>tag: tkinter</h1>
         </header>
-
-    <section class="post">
+        
+    <!-- Replace the following code by the block-->    
+    <!--        <section class="post">
         <header class="post-header">
-            <h3><a href="http://leonfocus.github.io/markdown-and-latex-equation-handbook/">Markdown语法和LaTeX数学记号速查手册</a></h3>
-            <p class="sub-header-3">2014-10-08</p>
-            <p class="post-summary">
-这篇文章是Markdown和LaTex的速查手册，阅读人群为科学工作者，尤其是物理领域的同行。常用的Markdown语法和数学符号、公式的LaTex的记号都列举在文中。本手册的用例如，Ipython Notebook或者支持Markdownd的博客。如果读者需要用到高级的技巧或完整的LaTex语法，请直接参与其官方文档。简而言之，我写本手册时权衡了完整和快查两个需求，力求简明而不简单
-...</p>
+            <h3><a href="/tkinter-gui/">Tkinter GUI编程实践与入门指南</a></h3>
+            <p class="sub-header-3">2015-08-30</p>
+            <p class="post-summary"><p>Tkinter是Python内建的GUI库，简单易学。上周我用了三天时间实现了自己的第一个GUI应用——Data Preview，在编写过程中我发现tkinter的中文资料不多，且比较零散，本文是我的个人总结，同时也有意写成新手入门指南的风格，本文预计会不断更新以使架构更加合理，行文更加流畅易懂。</p>
+<p>GUI（图形用户界面）应用其实非常适合用面向对象（OOP）的编程范式来组织代码，虽然在网络上搜索到的诸多代码片段都是用快速的方式来调用tkinter库，但是这不利于较大的GUI编写。tkinter标准库封装了Tk/Tcl语言，实际上我并不了解，但无碍于我们写一个真实世界的GUI应用（不然封装API干嘛）。可以想象，整个GUI程序就是个父对象，其包含的一些控件（widgets）是子对象，对象的属性可以呈现出可见的状态，当我们通过鼠标或键盘等方式输入时，这些事件（event-driven）会调用对象的方法（即一些函数）来完成对象属性的改变和对象间消息的传递，于是我们看到GUI的外观刷新了。在我写Data Preview的过程中，我理解了GUI的抽象逻辑，所以重构过一次代码，这对编写复杂的GUI应用会有帮助。</p></p>
         </header>
         <div class="read-more">
-            <a class="pure-button" href="http://leonfocus.github.io/markdown-and-latex-equation-handbook/">
-                Read on
-            </a>
-        </div>
-    </section>
-        <hr />
-    <section class="post">
-        <header class="post-header">
-            <h3><a href="http://leonfocus.github.io/this-blog/">This blog</a></h3>
-            <p class="sub-header-3">2014-10-04</p>
-            <p class="post-summary"><p>My new static blog was launched during this National day using <a href="http://blog.getpelican.com/" target="_blank">Pelican</a> and <a href="https://pages.github.com/" target="_blank">Github</a>. With lots of trials in these two days, this website works finally. Since I am a newbie, I just take many things from other guys (Thanks!). This theme is mainly taken from <a href="http://cyrille.rossant.net/" target="_blank">Cyrille Rossant's blog</a>, which is modified from <a href="https://github.com/PurePelicanTheme/pure-single" target="_blank">Pure</a> theme. Although some small changes have been made from Rossant's, yet I wanna tweak ...</p></p>
-        </header>
-        <div class="read-more">
-            <a class="pure-button" href="http://leonfocus.github.io/this-blog/">
+            <a class="pure-button" href="/tkinter-gui/">
                 Read on
             </a>
         </div>
@@ -189,13 +176,35 @@
 <nav class="pagination-wrapper">
     <div class="pagination">
         <div class="pagination-left">
-                <a href="http://leonfocus.github.io/"><span>&larr; previous</span></a>
+                &nbsp;
         </div>
-        <span>Page 2 / 2</span>
+        <span>Page 1 / 1</span>
         <div class="pagination-right">
         </div>
     </div>
-</nav>    </section>
+</nav>  -->
+        
+            <section class="post">
+                <header class="post-header">
+                    <h3><a href="/tkinter-gui/">Tkinter GUI编程实践与入门指南</a></h3>
+                    <p class="sub-header-3">2015-08-30</p>
+                    <p class="post-summary"><p>Tkinter是Python内建的GUI库，简单易学。上周我用了三天时间实现了自己的第一个GUI应用——Data Preview，在编写过程中我发现tkinter的中文资料不多，且比较零散，本文是我的个人总结，同时也有意写成新手入门指南的风格，本文预计会不断更新以使架构更加合理，行文更加流畅易懂。</p>
+<p>GUI（图形用户界面）应用其实非常适合用面向对象（OOP）的编程范式来组织代码，虽然在网络上搜索到的诸多代码片段都是用快速的方式来调用tkinter库，但是这不利于较大的GUI编写。tkinter标准库封装了Tk/Tcl语言，实际上我并不了解，但无碍于我们写一个真实世界的GUI应用（不然封装API干嘛）。可以想象，整个GUI程序就是个父对象，其包含的一些控件（widgets）是子对象，对象的属性可以呈现出可见的状态，当我们通过鼠标或键盘等方式输入时，这些事件（event-driven）会调用对象的方法（即一些函数）来完成对象属性的改变和对象间消息的传递，于是我们看到GUI的外观刷新了。在我写Data Preview的过程中，我理解了GUI的抽象逻辑，所以重构过一次代码，这对编写复杂的GUI应用会有帮助。</p></p>
+                </header>
+                <div class="read-more">
+                    <a class="pure-button" href="/tkinter-gui/">
+                        Read on
+                    </a>
+                </div>
+            </section>
+
+        
+    <!-- add the page list in tag by Leon-->        
+        
+
+
+        
+    </section>
             </div>
         </section>
         
@@ -228,7 +237,7 @@
         <footer id="footer" class="pure-u-1 pure-u-md-3-4">
             <div class="l-box">
                 <div>
-                    <p>&copy;2014 <a href="http://leonfocus.github.io">Leon Chang</a> &ndash;
+                    <p>&copy;2014 <a href="">Leon Chang</a> &ndash;
                         Modified from Rossant's <a href="https://github.com/PurePelicanTheme/pure-single" target="_blank">Pure</a> Theme
                         for <a href="http://blog.getpelican.com/" target="_blank">Pelican</a>
                     </p>
