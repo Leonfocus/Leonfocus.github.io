@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://leonfocus.github.io/index.html</loc>
-<lastmod>2015-09-28T22:23:14-00:00</lastmod>
+<lastmod>2015-11-15T22:37:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -158,29 +158,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://leonfocus.github.io/tag/numerical/</loc>
-<lastmod>2015-07-25T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://leonfocus.github.io/tag/life/</loc>
-<lastmod>2015-08-25T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://leonfocus.github.io/tag/physics/</loc>
 <lastmod>2015-08-25T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://leonfocus.github.io/tag/latex/</loc>
-<lastmod>2014-10-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -193,15 +172,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://leonfocus.github.io/tag/muse/</loc>
-<lastmod>2015-09-26T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://leonfocus.github.io/tag/finance/</loc>
-<lastmod>2015-07-25T00:00:00+08:06</lastmod>
+<loc>http://leonfocus.github.io/tag/latex/</loc>
+<lastmod>2014-10-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -214,6 +186,27 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://leonfocus.github.io/tag/poetry/</loc>
+<lastmod>2015-09-26T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://leonfocus.github.io/tag/gui/</loc>
+<lastmod>2015-08-24T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://leonfocus.github.io/tag/finance/</loc>
+<lastmod>2015-07-25T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://leonfocus.github.io/tag/python/</loc>
 <lastmod>2015-08-24T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -221,14 +214,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://leonfocus.github.io/tag/pelican/</loc>
-<lastmod>2014-10-15T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://leonfocus.github.io/tag/poetry/</loc>
+<loc>http://leonfocus.github.io/tag/essay/</loc>
 <lastmod>2015-09-26T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -242,15 +228,29 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://leonfocus.github.io/tag/gui/</loc>
-<lastmod>2015-08-24T00:00:00+08:06</lastmod>
+<loc>http://leonfocus.github.io/tag/life/</loc>
+<lastmod>2015-08-25T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://leonfocus.github.io/tag/essay/</loc>
+<loc>http://leonfocus.github.io/tag/pelican/</loc>
+<lastmod>2014-10-15T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://leonfocus.github.io/tag/muse/</loc>
 <lastmod>2015-09-26T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://leonfocus.github.io/tag/numerical/</loc>
+<lastmod>2015-07-25T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
